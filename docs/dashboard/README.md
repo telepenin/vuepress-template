@@ -1207,6 +1207,7 @@ Here you can install and uninstall the following components:
 * Invisible Captcha
 * KernelCare
 
+If you want to install it using CLI, please follow [this article](/command_line_interface/#features).
 ![](/images/settingsgeneralinstallation.png)
 
 
