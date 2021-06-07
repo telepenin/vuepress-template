@@ -814,4 +814,55 @@ Cleanup results will be stored in the <span class="notranslate">`results.json`</
 </div>
 
 
+## Overridable config
+
+Starting from Imunify360 v.5.8, we introduce the overridable config which provides the ability to provision default config for the whole fleet of Imunify servers and keep the ability for fine-tuning each particular server depending on its requirements.
+
+**Configs organization**:
+
+* A new directory for custom configs. The local overrides of the main config are put there: <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config.d/`</span>
+* The old config <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config`</span> is now linked to the <span class="notranslate">`imunify360.config.d/90-local.config`</span>. It contains changes made through UI as well as through CLI.
+* Configs in that directory will override the <span class="notranslate">`imunify360-base.config`</span> and each other in lexical order. First-level "sections" (like <span class="notranslate">`FIREWALL`</span>) are merged, while second-level "options" (like <span class="notranslate">`FIREWALL.TCP_IN_IPv4`</span>) are replaced completely.
+
+This way you can keep your local customizations, but still be able to rollout the main config.
+
+The CLI command to check the default configuration before merging with <span class="notranslate">`90-local.config`</span>:
+
+<div class="notranslate">
+
+```
+imunify360-agent config show defaults
+```
+</div>
+
+Here is an example of custom server configuration:
+
+| | |
+|-|-|
+|<span class="notranslate">`imunify360-base.config`</span><br><br>Provided by Imunify installation. Contains default recommended configuration|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '8880'`<br><span class="notranslate">`port_blocking_mode: ALLOW`</span>|
+|<span class="notranslate">`imunify360.config.d/50-common.config`</span><br><br>Provisioned by server owner to the fleet of servers.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '21'`<br><span class="notranslate">`port_blocking_mode: DENY`</span>|
+|<span class="notranslate">`imunify360.config.d/90-local.config`</span><br><br>Contains local customization per server individually.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '22'`<br>`- '12345'`|
+
+The resulting (merged) configuration will look like this:
+
+<div class="notranslate">
+
+```
+FIREWALL:
+  TCP_IN_IPv4:
+  - '20'
+  - '22'
+  - '12345'
+  port_blocking_mode: DENY
+```
+</div>
+
+The mechanics is as follows: first-level "sections" - for example <span class="notranslate">`FIREWALL`</span> are merged, while second-level "options" - for example <span class="notranslate">`FIREWALL.TCP_IN_IPv4`</span> are replaced completely. 
+
+Those who don’t need this type of overridable configs can continue using custom configurations in the <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config`</span>.
+
+This feature is backward compatible.
+
+
+
 
