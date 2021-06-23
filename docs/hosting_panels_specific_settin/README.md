@@ -1,4 +1,3 @@
-
 ---
 title: Hosting Panels Firewall Rulesets Specific Settings & ModSec
 meta:
