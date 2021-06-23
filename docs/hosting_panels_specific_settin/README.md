@@ -1,4 +1,12 @@
-# Hosting Panels Firewall Rulesets Specific Settings
+
+---
+title: Hosting Panels Firewall Rulesets Specific Settings & ModSec
+meta:
+  - name: description
+    content: Discover Hosting Panels Firewall Rulesets specific settings including modsec rules in Imunify360 security suite.
+---
+
+# Hosting Panels Firewall Rulesets Specific Settings & ModSec
 
 [[toc]]
 
