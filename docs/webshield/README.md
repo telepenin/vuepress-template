@@ -1,5 +1,5 @@
 ---
-title: Imunify360 Webshield
+title: 'Imunify360: Webshield'
 meta:
   - name: description
     content: Discover Imunify360 Webshield and its variety of features for ultimate server protection. This page goes over key Webshield components.
