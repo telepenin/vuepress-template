@@ -790,7 +790,7 @@ php /opt/ai-bolit/imunify_dbscan.php [OPTIONS] [PATH]
 ```
 </div>
 
-Scan results will be stored in the <span class="notranslate">`results.json`</span>.
+Scan results will be stored in the <span class="notranslate">`report.json`</span>.
 
 #### Scan & Clean-up database
 
