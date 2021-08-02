@@ -451,3 +451,42 @@ end
 }
 ```
 </div>
+
+### How to disable a specific request method
+
+Following is an example of customizing WebShield by disabling a specific request method.
+
+In the example the <span class="notranslate">`OPTIONS`</span> method is disabled.
+
+1. Place the following code into the <span class="notranslate">`/etc/imunify360-webshield/webshield-captcha.conf.d/no-options.conf`</span>
+   <div class="notranslate">
+
+   ```lua
+   if ($request_method = OPTIONS) {
+      return 403;
+   }
+   ```
+   </div>
+2. Restart WebShield by running the following command:
+   <div class="notranslate">
+
+   ```shell
+   service imunify360-webshield restart
+   ```
+   </div>
+3. Check that the <span class="notranslate">`OPTIONS`</span> method is disabled correctly by running the following command:
+   <div class="notranslate">
+
+   ```shell
+   curl -i -X OPTIONS http://[server IP]:52224
+   ```
+   </div>
+
+   You should get the following status code:
+   <div class="notranslate">
+
+   ```
+   HTTP/1.1 403 Forbidden
+   ```
+   </div>
+
