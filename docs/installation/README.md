@@ -92,7 +92,10 @@ apt-get update
 ```
 
 </div>
-
+  
+:::warning Warning
+Plesk does not have full support for backports repository. It is recommended to disable it after Imunify360 is installed.
+:::
 
 3. Log in with root privileges to the server where Imunify360 should be installed.
 
