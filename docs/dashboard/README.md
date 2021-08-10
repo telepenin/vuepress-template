@@ -1706,9 +1706,9 @@ Those options may be hidden for end-user if Cleanup is disabled in Features Mana
 
 * <span class="notranslate">_Enable RapidScan_</span> – dramatically speeds up repeated scans based on smart re-scan approach, local result caching and cloud-assisted scan. When you first enable the RapidScan feature, the first scan will run as before. But subsequent scans will see a dramatic speed improvement, anywhere between 5 to 20 times faster. You can find details [here](/features/#rapidscan).
 * <span class="notranslate">_Binary (ELF) malware detection_</span> – this option allows to search for any binaries (ELF files) in the user home directories and consider them malicious.
-* <span class="notranslate">_Enable HyperScan_</span><sup>_Experimental_</sup> – this option allows to use the regex matching HyperScan library in Malware Scanner to greatly improve the scanning speed. HyperScan requires its own signatures set that will be downloaded from the files.imunify360.com and compiled locally. 
+* <span class="notranslate">_Enable Hyperscan_</span><sup>_Experimental_</sup> – this option allows to use the regex matching Hyperscan library in Malware Scanner to greatly improve the scanning speed. Hyperscan requires its own signatures set that will be downloaded from the files.imunify360.com and compiled locally. 
 There are few platform requirements to use this feature:
-  * HyperScan supports Debian, Ubuntu and CentOS/CloudLinux 7 and later.
+  * Hyperscan supports Debian, Ubuntu and CentOS/CloudLinux 7 and later.
   * SSE3 processor instructions support. It is quite common nowadays, but may be lacking in virtual environments or in some rather old servers.
 
 
