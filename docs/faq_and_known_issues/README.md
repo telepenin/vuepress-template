@@ -411,16 +411,16 @@ You can find the results of this attempt in the <span class="notranslate">_Incid
 <div class="notranslate">
 
 ```
-curl -v http://mycoolwebsite.net//?i360test=88ff0adf94a190b9d1311c8b50fe2891c85af732 
+curl -v http://example.com//?i360test=88ff0adf94a190b9d1311c8b50fe2891c85af732 
 ```
 </div>
 
-And check the Imunify360 console log
+Replace `example.com` with the domain from the test server. And check the Imunify360 console log
 
 <div class="notranslate">
 
 ```
-grep 'Testing the work of the i360 ModSecurity rules' /var/log/imunify360/console.log
+grep 'IM360 WAF: Testing the IM360 ModSecurity ruleset' /var/log/imunify360/console.log
 ```
 </div>
 
