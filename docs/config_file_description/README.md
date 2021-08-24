@@ -137,6 +137,8 @@ that were uploaded via http/https. Note that it requires <a href="https://modsec
 <td># defines what part of all files will be rescanned during each scan. For example, if set 10 then 1/10 part of all files will be rescanned. The default value `null` - means "choose frequency based on scan schedule". E.g. month - 1, week - 5, day - 10.</td></tr>
 <tr><td><span class="notranslate">hyperscan: False</span></td>
 <td># allows to use (<span class="notranslate">True</span>) the regex matching Hyperscan library in Malware Scanner to greatly improve the scanning speed. <span class="notranslate">False</span> is the default value. Hyperscan requires its own signatures set that will be downloaded from the files.imunify360.com and compiled locally.<br><b>Platform requirements</b>:<br>* Hyperscan supports Debian, Ubuntu and CentOS/CloudLinux 7 and later.<br>* SSE3 processor instructions support. It is quite common nowadays, but may be lacking in virtual environments or in some rather old servers.</td></tr>
+<tr><td><span class="notranslate">enable_scan_cpanel: False</span></td>
+<td># enable (<span class="notranslate">True</span>) blocking malicious file uploads via cPanel File Manager. The default value is <span class="notranslate">False</span>. The type of operations processed are: edits and saves</td></tr>
 <tr>
 <th colspan="2" align="left"><span class="notranslate">CAPTCHA:</span></th></tr>
 <tr><td><span class="notranslate">cert_refresh_timeout: 3600</span></td>
