@@ -1690,7 +1690,7 @@ Read [CXS integration](/ids_integration/#cxs-integration) documentation carefull
   :::
 * <span class="notranslate">_Automatically send suspicious and malicious files for analysis_</span> – malicious and suspicious files will be sent to the Imunify360 Team for analysis automatically.
 * <span class="notranslate">_Try to restore from backup first_</span> – allows to restore file as soon as it was detected as malicious from backup if a clean copy exists. If a clean copy does not exist or it is outdated, default action will be applied. See also <span class="notranslate">[CloudLinux Backup](/dashboard/#backups)</span>.
-* <span class="notranslate">_Block malicious file uploads via Cpanel FileMan_</span><sup>_Experimental_</sup> – enable blocking malicious file uploads via cPanel File Manager. Also, the file operations via cPanel File Manager that turn out to be malicious are blocked. The type of operations processed are: edits and saves.
+* <span class="notranslate">_Block malicious file uploads via cPanel File Manager_</span><sup>_Experimental_</sup> – enable blocking malicious file uploads via cPanel File Manager. Also, the file operations via cPanel File Manager that turn out to be malicious are blocked. The type of operations processed are: edits and saves.
 * <span class="notranslate">_Use backups not older than (days)_</span> – allows to set the a maximum age of a clean file.
 * <span class="notranslate">_Default action on detect_</span> – configure Malware Scanner actions when detecting malicious activity:
   * <span class="notranslate">Just display in dashboard</span>
