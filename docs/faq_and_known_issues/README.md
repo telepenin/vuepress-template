@@ -951,6 +951,34 @@ imunify360-agent config update '{"PERMISSIONS": {"allow_malware_scan": true}}'
 
 All user scans are scheduled using a single queue. Thus, multiple scans requested by users will not affect server performance.
 
+ ### 28. How can I disable RBL-based WAF protection?
+
+In some of cases we need disable our RBL protaction for some of IP\IPs, and in this case will not be enought just add IP address to IM360 whitlist, becouse evenn if IP address is whitlisted but it listed in our RBL the request from this IP 
+will be droped on the WAF level (403 error), so in case if you need whitlist it on RBL you need perfrom these steps:
+
+1. be sure that IP address is already whitelisted in firewall, you can check it via UI or CLI, see more details here:
+https://docs.imunify360.com/command_line_interface/#whitelist 
+https://docs.imunify360.com/dashboard/#white-list 
+
+2. execute this CLI command:
+
+<div class="notranslate">
+```
+imunify360-agent create-rbl-whitelist
+```
+</div>
+
+After this steps IM360 firewal`s whitlist  will be synced with WAF whitelist
+
+In case if you need remove it from there, just remove it from firewall whitelist and perfrom again:
+
+<div class="notranslate">
+```
+imunify360-agent create-rbl-whitelist
+```
+</div>
+
+Note, this is not remove IP from our RBL lists, it just allow passing requests from abuser IP to your WEB server, ignoring RBL, locally, only on the server where it was whitelisted.
 
 ## Corner cases
 
