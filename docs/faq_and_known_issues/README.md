@@ -956,8 +956,9 @@ All user scans are scheduled using a single queue. Thus, multiple scans requeste
 In some cases, one might need to disable the RBL protection for some IPs, and it is not enough to just add the IP address to the Imunify360 whitelist. Because even the IP address is whitelisted but it is listed in our RBL, the request from this IP will be dropped on the WAF level (403 error). So, if you need to whitelist it on RBL, please follow these steps:
 
 1. Make sure that IP address is already whitelisted in firewall, you can check it via UI or CLI, see more details here:
-[https://docs.imunify360.com/command_line_interface/#whitelist](/command_line_interface/#whitelist )
-[https://docs.imunify360.com/dashboard/#white-list](/dashboard/#white-list )
+
+ * [https://docs.imunify360.com/command_line_interface/#whitelist](/command_line_interface/#whitelist )
+ * [https://docs.imunify360.com/dashboard/#white-list](/dashboard/#white-list )
 
 2. Run the following command:
 
