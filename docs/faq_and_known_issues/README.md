@@ -953,32 +953,35 @@ All user scans are scheduled using a single queue. Thus, multiple scans requeste
 
  ### 28. How can I disable RBL-based WAF protection?
 
-In some of cases we need disable our RBL protaction for some of IP\IPs, and in this case will not be enought just add IP address to IM360 whitlist, becouse evenn if IP address is whitlisted but it listed in our RBL the request from this IP 
-will be droped on the WAF level (403 error), so in case if you need whitlist it on RBL you need perfrom these steps:
+In some cases, one might need to disable the RBL protection for some IPs, and it is not enough to just add the IP address to the Imunify360 whitelist. Because even the IP address is whitelisted but it is listed in our RBL, the request from this IP will be dropped on the WAF level (403 error). So, if you need to whitelist it on RBL, please follow these steps:
 
-1. be sure that IP address is already whitelisted in firewall, you can check it via UI or CLI, see more details here:
-https://docs.imunify360.com/command_line_interface/#whitelist 
-https://docs.imunify360.com/dashboard/#white-list 
+1. Make sure that IP address is already whitelisted in firewall, you can check it via UI or CLI, see more details here:
+[https://docs.imunify360.com/command_line_interface/#whitelist](/command_line_interface/#whitelist )
+[https://docs.imunify360.com/dashboard/#white-list](/dashboard/#white-list )
 
-2. execute this CLI command:
+2. Run the following command:
 
 <div class="notranslate">
+ 
 ```
 imunify360-agent create-rbl-whitelist
 ```
 </div>
 
-After this steps IM360 firewal`s whitlist  will be synced with WAF whitelist
+After these steps, the Imunify360 firewall whitelist will be synced with the WAF whitelist.
 
-In case if you need remove it from there, just remove it from firewall whitelist and perfrom again:
+In case if you need to remove it from there, just remove it from the firewall whitelist and run the following command again:
 
 <div class="notranslate">
+ 
 ```
 imunify360-agent create-rbl-whitelist
 ```
 </div>
 
-Note, this is not remove IP from our RBL lists, it just allow passing requests from abuser IP to your WEB server, ignoring RBL, locally, only on the server where it was whitelisted.
+:::tip Note
+This will not remove the IP from our RBL lists, it just allows passing requests from the abuser's IP to your WEB server ignoring RBL, locally, only on the server where it was whitelisted.
+:::
 
 ## Corner cases
 
