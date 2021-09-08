@@ -1807,11 +1807,13 @@ Add your path to the related hook (or multiple hooks) and implement the custom l
 
 Also in this script you could find the way to parse JSON that come from Imunify360 and description of this JSON schema in every possible case. Such descriptions are provided by docstring of the <span class="notranslate">`handle`</span> methods.
 
-#### Adding a custom e-mail template
+#### Adding custom email template
 
-Imunify Notifications Engine supports adding custom e-mail messages either the header or body. It may be useful for adding caveats or any own message.
+Imunify Notifications Engine supports adding custom email messages either the header or body. It may be useful for adding warnings or any message.
+	
+To add a custom email template, follow these steps:
 
-1. Enable notification a <span class="notranslate">CUSTOM_SCAN_MALWARE_FOUND</span> event. It is triggered by a malware caught in by on-demand scan:
+1. Enable notification for the <span class="notranslate">`CUSTOM_SCAN_MALWARE_FOUND`</span> event. It is triggered by a malware caught by on-demand scan:
 
 <div class="notranslate">
 
@@ -1829,7 +1831,7 @@ mkdir -p /etc/imunify360/emails/custom_scan_malware_found
 ```
 </div>
 
-3. Add a Hello World template:
+3. Add a "Hello World" template:
 
 <div class="notranslate">
 
@@ -1858,7 +1860,7 @@ EOF
 
 </div>
 
-More examples available at: **/usr/share/imunify-notifier/templates/**
+More examples are available at: **/usr/share/imunify-notifier/templates/**
 
 ## Proactive
 
