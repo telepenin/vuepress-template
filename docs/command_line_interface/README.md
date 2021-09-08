@@ -1807,6 +1807,60 @@ Add your path to the related hook (or multiple hooks) and implement the custom l
 
 Also in this script you could find the way to parse JSON that come from Imunify360 and description of this JSON schema in every possible case. Such descriptions are provided by docstring of the <span class="notranslate">`handle`</span> methods.
 
+#### Adding custom email template
+
+Imunify Notifications Engine supports adding custom email messages either the header or body. It may be useful for adding warnings or any message.
+	
+To add a custom email template, follow these steps:
+
+1. Enable notification for the <span class="notranslate">`CUSTOM_SCAN_MALWARE_FOUND`</span> event. It is triggered by a malware caught by on-demand scan:
+
+<div class="notranslate">
+
+```
+imunify360-agent notifications-config update '{"rules": {"CUSTOM_SCAN_MALWARE_FOUND": {"ADMIN": {"enabled": true, "admin_emails": ["your-email@example.domain"]}}}}'
+```
+</div>
+
+2. Create template directory:
+
+<div class="notranslate">
+
+```
+mkdir -p /etc/imunify360/emails/custom_scan_malware_found
+```
+</div>
+
+3. Add a "Hello World" template:
+
+<div class="notranslate">
+
+```bash
+cat <<EOF > /etc/imunify360/emails/custom_scan_malware_found/en.json
+[
+    {
+        "id": "subject",
+        "other": "TESTING templates on {{serverName}}"
+    },
+    {
+        "id": "scan_description_section",
+        "other": "Hello World, from custom template test"
+    }
+]
+EOF
+
+cat <<EOF > /etc/imunify360/emails/custom_scan_malware_found/t.tmpl
+From: {{.mail_from}}
+To: {{.mail_to}}
+Subject: {{.messages.subject}}
+
+{{.messages.scan_description_section}}
+EOF
+```
+
+</div>
+
+More examples are available at: **/usr/share/imunify-notifier/templates/**
 
 ## Proactive
 
