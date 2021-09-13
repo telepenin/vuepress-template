@@ -37,6 +37,21 @@ Imunify360 can be installed directly on the server, independent of any panel, re
 Imunify Web-UI PHP code has to be executed under a non-root user which has access to `/var/run/defence360agent/non_root_simple_rpc.sock`. If it runs in CageFS, you'll need to configure it accordingly.
 :::
 
+To allow non-root user in CageFS access to the socket, this workaround should be applied:
+
+```sh
+# create directory for moun-point
+mkdir /imunify-ui-shared
+# add symlink for user which belong to UI backend `imunify-web` in this example)
+ln -s /var/run/defence360agent /imunify-ui-shared/imunify-web
+# add symlink to cagefs skeleton
+rm -f /usr/share/cagefs-skeleton/var/run/defence360agent
+ln -s /imunify-ui-shared/imunify-web /usr/share/cagefs-skeleton/var/run/defence360agent
+# add mount point to cagefs
+echo "%/imunify-ui-shared" >> /etc/cagefs/cagefs.mp
+# remount all
+cagefsctl --remount-all
+```
 
 ### 1. Prerequisites
 
@@ -44,7 +59,7 @@ Imunify360 Stand-alone version requires the following components installed or en
 
 * ModSecurity 2.9.x for Apache or ModSecurity 3.0.x for Nginx
 * Apache module <span class="notranslate">`mod_remoteip`</span> or nginx module <span class="notranslate">`ngx_http_realip_module`</span>
-* PHP with <span class="notranslate">`proc_open`</span> function enabled (remove it from the <span class="notranslate">`disable_functions`</span> list in <span class="notranslate">`php.ini`</span>)
+* PHP with <span class="notranslate">`json`</span> exctension loaded and <span class="notranslate">`proc_open`</span> function enabled (remove it from the <span class="notranslate">`disable_functions`</span> list in <span class="notranslate">`php.ini`</span>)
 
 :::warning Warning
 We recommend using the stable versions of ModSecurity3 (i.e. 3.0.4), because developing versions (i.e. master) can have
