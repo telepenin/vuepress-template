@@ -37,7 +37,7 @@ Imunify360 can be installed directly on the server, independent of any panel, re
 Imunify Web-UI PHP code has to be executed under a non-root user which has access to `/var/run/defence360agent/non_root_simple_rpc.sock`. If it runs in CageFS, you'll need to configure it accordingly.
 :::
 
-To allow non-root user in CageFS access to the socket this workaround should be applied:
+To allow non-root user in CageFS access to the socket, this workaround should be applied:
 
 ```sh
 # create directory for moun-point
