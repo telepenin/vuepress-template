@@ -612,8 +612,9 @@ Use filters to show the exact list of the IPs:
 * <span class="notranslate">Comments</span> – allows filtering the list by comments. Enter a comment into the input field.
 * Use <span class="notranslate">_Items per page_</span> at the page bottom right to set the number of the incidents to be shown on the page.
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::tip Notes
+* Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+* The individually whitelisted IP addresses take precedence over the country black list. These IP addresses will retain access even if the corresponding country of origin is blocked.
 :::
 
 The following actions are available for the ports:
