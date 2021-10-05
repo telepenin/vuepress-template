@@ -79,7 +79,7 @@ It’s also recommended to disable any third-party <span class="notranslate">mod
 To do so, go to <span class="notranslate">ModSecurity Vendors</span> section of cPanel main menu, and switch to <span class="notranslate">`Off`</span> all enabled vendors except Imunify360 ruleset.
 If there is no Imunify360 ruleset installed, run <span class="notranslate">` imunify360-agent install-vendors`</span> command.
 
-![](/images/whmmodsecurityvendors_zoom70.png)
+![](/images/ModSecVendors.png)
 
 * Enable rules auto-update. Otherwise, you won't get important updates of ModSecurity ruleset in time
     * For Apache run the following command:
