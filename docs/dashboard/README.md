@@ -740,17 +740,21 @@ The table can be sorted by <span class="notranslate">_User name_</span> and <spa
 Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
 :::
 
-### Files
+### Malicious
 
-Go to <span class="notranslate">Imunify360 → Malware Scanner → Files</span> tab. Here, there is a table with a list of infected files within all domains and user accounts.
+Go to <span class="notranslate">Imunify360 → Malware Scanner → Malicious</span> tab. Here, there is a table with a list of infected files within all domains and user accounts.
 
-![](/images/malwarescanner_files.png)
+![](/images/MDSUI.png)
 
 The table has the following columns:
 
-* <span class="notranslate">**Detected**</span> — displays the exact time when a file was detected as malicious.
-* <span class="notranslate">**User name**</span> — displays file owner name.
-* <span class="notranslate">**File**</span> — the path where the file is located starting with root
+* <span class="notranslate">**Scan date**</span> — displays the exact time when a file was detected as malicious.
+* <span class="notranslate">**Type**</span> — <span class="notranslate">Malware Database Scanner</span> or <span class="notranslate">Malware Scanner</span>.
+  :::tip Note
+  To function properly <span class="notranslate">Malware Database Scanner</span> requires MariaDB/MySQL DB management system version 5.5. Recommended version is 5.6+. Note, only WordPress databases are supported as for now.
+  :::
+* <span class="notranslate">**Username**</span> — displays file owner name.
+* <span class="notranslate">**Malicious**</span> — the path where the file is located starting with root.
 * <span class="notranslate">**Reason**</span> — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor. You can derive some information from the signature ID itself. `SMW-SA-05155-wshll` – in this Signature ID:
 	* The first section can be either `SMW` or `CMW`. `SMW` stands for Server Malware and `CMW` stands for Client Malware
 	* The second section of ID can be either `INJ` or `SA`. `INJ` stands for Injection (means Malware is Injected to some legitimate file) and `SA` stands for StandAlone (means File is Completely Malicious)
@@ -1635,6 +1639,7 @@ Here you can configure the following:
 * [<span class="notranslate">Background Scanning</span>](/dashboard/#background-scanning)
 * [<span class="notranslate">Cleanup</span>](/dashboard/#cleanup)
 * [<span class="notranslate">Proactive Defense</span>](/dashboard/#proactive-defense-2)
+* [<span class="notranslate">Malware Database Scanner</span>](/dashboard/#malware-database-scanner)
 
 
 ::: tip Note
@@ -1767,6 +1772,20 @@ By enabling this feature Blamer will be enabled as well and Proactive Defence sw
 
 
 Click <span class="notranslate">_Save changes_</span> at the page bottom to apply all changes.
+
+#### Malware Database Scanner
+
+![](/images/MDSSetUI.png)
+
+Enable <span class="notranslate">_Malware Database Scanner_</span> – a database antivirus: automated malware detection and clean-up of web applications.
+
+:::tip Note
+Requires MariaDB/MySQL DB management system version 5.5. Recommended version is 5.6+. Note, only WordPress databases are supported as for now.
+:::
+
+
+Click <span class="notranslate">_Save changes_</span> to apply changes.
+
 
 ### Backups
 
