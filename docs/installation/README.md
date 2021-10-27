@@ -19,8 +19,8 @@
 
 **Hardware**
 
-* <span class="notranslate">RAM: 1Gb</span>
-* <span class="notranslate">HDD: 20Gb</span> available disk space
+* <span class="notranslate">RAM: 1GB</span>
+* <span class="notranslate">HDD: 20GB</span> available disk space
 
 **Supported hosting panels**
 
