@@ -43,7 +43,7 @@
 * Nginx ([only in Standalone mode](/stand_alone/))
 
 
-## Side by side installation with another <span class="notranslate">IDS</span>
+## Side by side installation with another IDS
 
 **Compatible**
 
@@ -84,7 +84,8 @@ On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</s
    * [cPanel  hosting panel](/hosting_panels_specific_settin/#cpanel)
    * [Plesk hosting panel](/hosting_panels_specific_settin/#plesk)
    * [Stand-alone version (no hosting panel)](/stand_alone/)
-   * On  <span class="notranslate">Debian 10</span>, enable  <span class="notranslate">`buster-backports`<span>:
+   * On  <span class="notranslate">Debian 10</span>, enable  <span class="notranslate">`buster-backports`</span>:
+  
 <div class="notranslate">
 
 ```
@@ -98,9 +99,9 @@ apt-get update
 Plesk does not have full support for backports repository. It is recommended to disable it after Imunify360 is installed.
 :::
 
-3. Log in with root privileges to the server where Imunify360 should be installed.
+1. Log in with root privileges to the server where Imunify360 should be installed.
 
-4. Go to your home directory and run the commands:
+2. Go to your home directory and run the commands:
 
 <div class="notranslate">
 
@@ -140,6 +141,7 @@ wget https://repo.imunify360.cloudlinux.com/defence360/i360deploy.sh -O i360depl
 ```
 
 </div>
+
 <div class="notranslate">
 
 ```
@@ -236,86 +238,76 @@ yum install policycoreutils-python-utils
 Updates are unconditionally enabled and the Imunify360 service starts during the package update.
 :::
 
+### Beta
 
-To upgrade Imunify360, run the command:
-
-<div class="notranslate">
-
-```
-yum update imunify360-firewall
-```
-
-</div>
-
-To update Imunify360 beta version, run the command:
-
-<div class="notranslate">
+To upgrade Imunify360 on CentOS/CloudLinux systems, run the command:
 
 ```
 yum update imunify360-firewall --enablerepo=imunify360-testing
 ```
 
-</div>
-
-To update Imunify360 on <span class="notranslate">Ubuntu/Debian</span>, run the command:
-
-<div class="notranslate">
+To upgrade Imunify360 on Ubuntu 16.04, run the following command:
 
 ```
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/16.04/ xenial main' > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-</div>
-
-To update Imunify360 **beta** version on <span class="notranslate">Ubuntu 16.04</span>, run the command:
-
-<div class="notranslate">
+To upgrade Imunify360 on Ubuntu 18.04, run the following command:
 
 ```
-echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/16.04/ xenial main'  > /etc/apt/sources.list.d/imunify360-testing.list
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/18.04/ bionic main' > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-</div>
-
-
-To update Imunify360 **beta** version on <span class="notranslate">Ubuntu 18.04</span>, run the command:
-
-<div class="notranslate">
+To upgrade Imunify360 on Ubuntu 20.04, run the following command:
 
 ```
-echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/18.04/ bionic main'  > /etc/apt/sources.list.d/imunify360-testing.list
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/20.04/ focal main' > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-</div>
+To upgrade Imunify360 on Debian 9, run the following command:
 
-To update Imunify360 **beta** version on <span class="notranslate">Debian</span>, run the command:
+```
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/9/ stretch main'  > /etc/apt/sources.list.d/imunify360-testing.list
+apt-get update
+apt-get install --only-upgrade imunify360-firewall
+```
 
-<div class="notranslate">
+To upgrade Imunify360 on Debian 10, run the following command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/10/ buster main'  > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify360-firewall
-```
+``` 
 
-</div>
+### Production
 
-
-If you do not want to receive updates from <span class="notranslate">beta</span>, remove <span class="notranslate">beta</span> repository:
-
-<div class="notranslate">
+CentOS/CloudLinux systems:
 
 ```
-rm /etc/apt/sources.list.d/imunify360-testing.list
+yum update imunify360-firewall
+```
+
+Ubuntu 16.04, 18.04, and 20.04 systems:
+
+```
 apt-get update
+apt-get install --only-upgrade imunify360-firewall
 ```
 
-</div>
+Debian 9 and 10 systems:
+
+```
+apt-get update
+apt-get install --only-upgrade imunify360-firewall
+```
+
 
 
 ### Gradual roll-out
