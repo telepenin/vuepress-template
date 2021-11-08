@@ -240,7 +240,7 @@ Updates are unconditionally enabled and the Imunify360 service starts during the
 
 ### Beta
 
-To upgrade Imunify360 on CentOS/CloudLinux systems, run the command:
+To upgrade Imunify360 on CentOS/CloudLinux/AlmaLinux systems, run the command:
 
 ```
 yum update imunify360-firewall --enablerepo=imunify360-testing
@@ -288,7 +288,7 @@ apt-get install --only-upgrade imunify360-firewall
 
 ### Production
 
-CentOS/CloudLinux systems:
+CentOS/CloudLinux/AlmaLinux systems:
 
 ```
 yum update imunify360-firewall
