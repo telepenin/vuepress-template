@@ -178,7 +178,7 @@ To enable domain-specific ModSecurity configuration, specify the <span class="no
 <div class="notranslate">
 
 ``` ini
-[web_server]
+[integration_scripts]
 modsec_domain_config_script = /path/to/inject/domain/specific/config/script.sh
 ```
 </div>
