@@ -1520,7 +1520,7 @@ Click <span class="notranslate">_Save changes_</span> button on the bottom of th
 
 Click <span class="notranslate">_Save changes_</span> button on the bottom of the section to save changes.
 
-#### Anti-bot protection <sup> <badge text="experimental"/></sup>
+#### Anti-bot protection
 
 Tick the <span class="notranslate">_Anti-bot protection_</span> checkbox to enable the JavaScript challenge – "Splash Screen."
 
