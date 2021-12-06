@@ -2,7 +2,7 @@
 
 #### Licensing
 
-Imunify360 pricing depends on the registered users on the installed server:
+Imunify360 pricing depends on the users registered on the installed server:
 
  * For <span class="notranslate">cPanel, Plesk</span>, and <span class="notranslate">DirectAdmin</span> hosting panels it calculates the number of users in it, excluding system users.
 
