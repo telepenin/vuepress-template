@@ -1826,9 +1826,9 @@ This section describes the following:
 To enable backups log in to a hosting panel as administrator, go to Imunify360 plugin and do the following.
 * Go to <span class="notranslate">_Imunify360 → Settings → Backups_</span>. If the feature is not currently used the <span class="notranslate">_Backup and restore_</span> is <span class="notranslate">_Disabled_</span>.
 * To enable it, select backup provider from the dropdown:
-  * <span class="notranslate">[CloudLinux Backup](https://www.imunify360.com/cloudlinux-backup)</span>
-  * <span class="notranslate">[Acronis Backup](https://www.acronis.com/en-eu/)</span>
-  * cPanel, Plesk or DirectAdmin Backup (according to user’s hosting panel)
+  * <span class="notranslate">[CloudLinux Backup](/dashboard/#cloudlinux-backup)</span>
+  * <span class="notranslate">[Acronis Backup](/dashboard/#acronis-backup)</span>
+  * <span class="notranslate">[cPanel Plesk or DirectAdmin Backup](/dashboard/#cpanel-plesk-or-directadmin-backup)</span>
 
 ![](/images/settingsbackup.png)
 
@@ -1855,7 +1855,7 @@ To activate <span class="notranslate">CloudLinux Backup</span>, follow the next 
 
 ![](/images/backuprestorecloudlinux.png)
 
-**Acronis Backup**
+#### Acronis Backup
 
 Choose it if you have Acronis account. So that Imunify360 can use backups to restore malicious or suspicious files from the backup if a clean version exists.
 
@@ -1867,7 +1867,7 @@ Imunify360 checks if Acronis agent is already installed. If not, Imunify360 inst
 
 ![](/images/acronisbackup.png)
 
-**cPanel Plesk or DirectAdmin Backup**
+#### cPanel Plesk or DirectAdmin Backup
 
 * Choose cPanel/Plesk/DirectAdmin backup
 * Select <span class="notranslate">_cPanel/Plesk/DirectAdmin Backup_</span>
