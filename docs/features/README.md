@@ -718,8 +718,8 @@ Click <span class="notranslate">_Save changes_</span> at the bottom to apply all
 
 <span class="notranslate">Malware Database Scanner (MDS)</span> is designed to solve all malware related problems in the database.
 
-:::danger Warning
-Version 5.1 of the Imunify360 introduces a CLI tool without the UI. Further versions will be integrated with the Malware Scanner UI.
+:::tip Note
+Version Imunify360 6.0 or later supports the use of MDS in UI.
 :::
 
 :::danger Warning
@@ -747,7 +747,7 @@ The easiest way to use MDS is to run it with  <span class="notranslate">`--searc
 <div class="notranslate">
 
 ```
-php /opt/ai-bolit/imunify_dbscan.php [OPTIONS] [PATH]
+/opt/ai-bolit/wrapper /opt/ai-bolit/imunify_dbscan.php [OPTIONS] [PATH]
 ```
 </div>
 
@@ -786,7 +786,7 @@ php /opt/ai-bolit/imunify_dbscan.php [OPTIONS] [PATH]
 <div class="notranslate">
 
 ```
-# /opt/alt/php74-imunify/usr/bin/php -n -d extension=json.so -d extension=pdo.so -d extension=mysqlnd.so -d extension=nd_mysqli.so /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --avdb=/var/imunify360/files/sigs/v1/aibolit/mds-ai-bolit-hoster.db --report-file=`pwd`/report.json --scan
+# /opt/ai-bolit/wrapper /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --avdb=/var/imunify360/files/sigs/v1/aibolit/mds-ai-bolit-hoster.db --report-file=`pwd`/report.json --scan
 ```
 </div>
 
@@ -797,7 +797,7 @@ Scan results will be stored in the <span class="notranslate">`report.json`</span
 <div class="notranslate">
 
 ```
-#  /opt/alt/php74-imunify/usr/bin/php -n -d extension=json.so -d extension=pdo.so -d extension=mysqlnd.so -d extension=nd_mysqli.so /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --avdb=/var/imunify360/files/sigs/v1/aibolit/mds-ai-bolit-hoster.db --procudb=/var/imunify360/files/sigs/v1/aibolit/mds-procu2.db --report-file=`pwd`/report.json --clean
+#  /opt/ai-bolit/wrapper /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --avdb=/var/imunify360/files/sigs/v1/aibolit/mds-ai-bolit-hoster.db --procudb=/var/imunify360/files/sigs/v1/aibolit/mds-procu2.db --report-file=`pwd`/report.json --clean
 ```
 </div>
 
@@ -809,7 +809,7 @@ Cleanup results will be stored in the <span class="notranslate">`results.json`</
 <div class="notranslate">
 
 ```
-# /opt/alt/php74-imunify/usr/bin/php -n -d extension=json.so -d extension=pdo.so -d extension=mysqlnd.so -d extension=nd_mysqli.so /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --report-file=$REPORT --restore=`pwd`/mds_backup_1597223818.csv
+# /opt/ai-bolit/wrapper /opt/ai-bolit/imunify_dbscan.php --port=3306 --login=user --password-from-stdin --database=$DATABASE --report-file=$REPORT --restore=`pwd`/mds_backup_1597223818.csv
 ```
 </div>
 
