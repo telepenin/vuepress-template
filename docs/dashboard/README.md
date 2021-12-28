@@ -242,6 +242,37 @@ Click an incident to expand the detailed information.
 
 ![](/images/expand.jpg)
 
+
+Starting from version 6.2 Imunify360 will scan zip archives by default. It will not be possible to disable this functionality through the UI, but it will be possible through the command line.
+
+**For Ubuntu, CentOS/CloudLinux >= 7**
+
+To disable scanning of archives, you will need to run the following command:
+
+```
+echo '' > /etc/sysconfig/aibolit-resident && systemctl daemon-reload && systemctl restart aibolit-resident.service
+```
+
+To switch the feature back on:
+
+```
+echo 'ARCHIVE_SCAN="--scan-archive"' > /etc/sysconfig/aibolit-resident && systemctl daemon-reload && systemctl restart aibolit-resident.service
+```
+
+**For CentOS/CloudLinux 6**
+
+To disable scanning of archives, you will need to run the following command:
+
+```
+sed -i 's/--scan-archive//g' /etc/minidaemon/minidaemon-aibolit.cfg && /sbin/service minidaemon stop && /sbin/service minidaemon start
+```
+
+To switch the feature back on:
+
+```
+sed -ri "s/^(cmd=.*)$/\1--scan-archive/g" /etc/minidaemon/minidaemon-aibolit.cfg && /sbin/service minidaemon stop && /sbin/service
+```
+
 #### Actions available for the Incidents
 
 * Disabling the rule of the incident and add it to the list of Disabled rules. Click _Ban_ icon in a proper incident row and confirm the action.
@@ -774,7 +805,7 @@ The table has the following columns:
   * <span class="notranslate">**Restore from backup**</span> — click the <span class="notranslate">_Gear_</span> symbol ![](/images/gear.png) and select <span class="notranslate">_Try to restore from backup_</span> to restore the original file before it got infected if it exists.
 
 :::warning Warning
-Starting from Imunify360 v.5.5, <span class="notranslate">_Delete permanently_</span>, <span class="notranslate">_Quarantine file_</span>, and <span class="notranslate">_Cleanup, Quarantine as a fallback_</span> options are not available. Restoration from the Quarantine is available until the “Quarantine” Default Action is completely removed from the product (v.5.8, April 2021). You can still manage files in the quarantine if they were quarantined earlier. For more information see [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
+Starting from ImunifyAV(+) v.6.2, the _Quarantine_ and _Delete_ actions were removed permanently from the UI as well as the CLI in Imunify360. Previously quarantined files are also subject to deletion. After this change is implemented, the restoration of the previously quarantined files will become impossible. For more information see this [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
 :::
 
 To perform a bulk action, tick required files and click the corresponding button above the table.
