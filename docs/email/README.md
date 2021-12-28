@@ -1,3 +1,0 @@
-# Imunify Email
-
-## Installation process
