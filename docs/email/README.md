@@ -146,6 +146,7 @@ The table has the following columns:
   * <span class="notranslate">**Release & Send**</span> — hosting admin can use multi-select and release & send several emails at once
 
    ![](/images/EmailRelease.png)
+   
 
   * **Delete** — delete email permanently
 
