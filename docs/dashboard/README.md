@@ -1402,7 +1402,7 @@ To enable these settings via direct config file update or a command-line interfa
 <div class="notranslate">
 
 ```
-/etc/sysconfig/imunify360/imunify360.config
+imunify360-agent config update '{"SMTP_BLOCKING": {"allow_local": true, "enable": true}}'
 ```
 </div>
 
