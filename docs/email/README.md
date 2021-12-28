@@ -1,4 +1,4 @@
-# Email
+# Imunify Email
 
 
 ## Installation
