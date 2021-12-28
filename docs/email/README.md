@@ -3,11 +3,11 @@
 
 ## Installation
 
-:::danger Note
+:::note Note
 Hosting administrator only.
 :::
 
-:::danger Important
+:::note Important
 Imunify Email beta is available for installation for registered beta testers only. Make sure you have subscribed as beta tester using [https://imunifyemail.com/](https://imunifyemail.com/) and followed the instructions sent by email.
 :::
 
@@ -42,8 +42,8 @@ bash imunifyemail-deploy.sh
 
 During installation, the following users will be created: 
 
-* _rspamd
-* _imunifyemail
+* `_rspamd`
+* `_imunifyemail`
 
 The `_imunifyemai` user will also be added to the `_imunify` group.
 
@@ -114,24 +114,24 @@ imunifyemail-config enable
 
 ## WHM user interface
 
-:::danger Note
+:::note Note
 Hosting administrator only.
 :::
 
 Imunify Email scans the outbound emails on the server and allows to identify viral mailings and other viral outbound mail content for all accounts on the server.
 
-Click <span class="notranslate">_Email_</span> in the main menu of the Imunify360 admin interface.
+Click _Email_ in the main menu of the Imunify360 admin interface.
 
 ![](/images/EmailMain.png)
 
 The following tabs are available:
 
-* <span class="notranslate">[Quarantine](/email/#quarantine)</span>
-* <span class="notranslate">[Settings](/email/#settings)</span>
+* [Quarantine](/email/#quarantine)
+* [Settings](/email/#settings)
 
 ## Quarantine
 
-Go to <span class="notranslate">Imunify360 → Email → Quarantine</span> tab. Here, there are emails that are considered viral or malicious for all accounts on the server. You can decline or confirm the Imunify Email decision and either release and send emails or remove them completely.
+Go to Imunify360 → Email → Quarantine tab. Here, there are emails that are considered viral or malicious for all accounts on the server. You can decline or confirm the Imunify Email decision and either release and send emails or remove them completely.
 
 ![](/images/EmailQuarantineTab.png)
 
@@ -147,17 +147,19 @@ The table has the following columns:
 
    ![](/images/EmailRelease.png)
 
-  * <span class="notranslate">**Delete**</span> — delete email permanently
+  * **Delete** — delete email permanently
 
     ![](/images/EmailDelete.png)
 
-  * <span class="notranslate">**View Email**</span> — view email content
+  * **View Email** — view email content
 
     ![](/images/EmailView1.png)
 
-    * Body - decoded email content with tags removed
-    * Header - email Headers section
-    * Plain text - headers plus original email body
+  - **Body** -  decoded email content with tags removed
+
+  - **Header** - email Headers section
+
+  - **Plain text** - headers plus original email body
 
 :::tip Note
 In this Beta release, the notifications are not sent both when deleting or releasing an email. Will be added in the next release.
@@ -169,7 +171,7 @@ In this Beta release, the notifications are not sent both when deleting or relea
 Hosting administrator only.
 :::
 
-Go to <span class="notranslate">Imunify360 → Email → Settings</span> tab. The settings allow managing the space for quarantine. An administrator can increase or decrease the space for the user's quarantine. If all space is consumed, the oldest emails in quarantine will be permanently deleted.
+Go to Imunify360 → Email → Settings tab. The settings allow managing the space for quarantine. An administrator can increase or decrease the space for the user's quarantine. If all space is consumed, the oldest emails in quarantine will be permanently deleted.
 
 :::danger Note
 By default, the space for the user's quarantine is 100 MB.
