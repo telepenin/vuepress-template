@@ -1734,7 +1734,7 @@ Read [CXS integration](/ids_integration/#cxs-integration) documentation carefull
   * <span class="notranslate">Cleanup</span> (default)
 
   :::warning Warning
-  Starting from Imunify360 v.5.5, <span class="notranslate">_Delete permanently_</span>, <span class="notranslate">_Quarantine file_</span>, and <span class="notranslate">_Cleanup, Quarantine as a fallback_</span> options are not available. Restoration from the Quarantine is available until the “Quarantine” Default Action is completely removed from the product (v.5.8, April 2021). You can still manage files in the quarantine if they were quarantined earlier. For more information see [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
+  Starting from ImunifyAV(+) v.6.2, the _Quarantine_ and _Delete_ actions were removed permanently from the UI as well as the CLI in ImunifyAV(+). Previously quarantined files are also subject to deletion. After this change is implemented, the restoration of the previously quarantined files will become impossible. For more information see this [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
   :::
 
 
