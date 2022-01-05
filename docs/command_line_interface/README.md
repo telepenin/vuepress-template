@@ -1947,6 +1947,17 @@ imunify360-agent register [--optional arguments] [KEY]
 
 If you will use this command without the <span class="notranslate">`KEY`</span> argument, then it will try to register and activate current activation key.
 
+In case when the number of users on the server changes and one license is replaced by another, it is necessary to run the following command to update the license:
+	
+<div class="notranslate">
+
+```
+imunify360-agent update-license
+OK
+```
+
+</div>
+
 **Example 1:**
 
 The following command will register and activate Imunify360 with the provided activation key:
