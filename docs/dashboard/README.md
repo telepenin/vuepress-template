@@ -2135,7 +2135,7 @@ It is possible to enable Service Status checker for Imunify360. Perform the foll
 * In <span class="notranslate">_Additional Services_</span> section tick <span class="notranslate">`imunify360-agent`</span> and <span class="notranslate">`imunify360-captcha`</span> checkboxes.
 * Click <span class="notranslate">_Save_</span> and wait until cPanel enables the Service Status checker for Imunify360.
 
-![](/images/ServiceManagercPanel.png)
+![](/images/ServiceManagercPanel1.png)
 
 If succeeded, the status of Imunify360 service will be displayed at Service Status section of Server Status.
 
