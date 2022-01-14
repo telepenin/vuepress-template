@@ -2132,7 +2132,7 @@ Country-based white or blacklisting includes GeoLite2 data created by MaxMind, a
 It is possible to enable Service Status checker for Imunify360. Perform the following steps:
 
 * Go to <span class="notranslate">_Service Configuration_</span> and choose <span class="notranslate">_Service Manager_</span>.
-* In <span class="notranslate">_Additional Services_</span> section tick <span class="notranslate">`imunify360-agent`</span> and <span class="notranslate">`imunify360-captcha`</span> checkboxes.
+* In <span class="notranslate">_Additional Services_</span> section tick <span class="notranslate">`imunify360`</span> checkbox.
 * Click <span class="notranslate">_Save_</span> and wait until cPanel enables the Service Status checker for Imunify360.
 
 ![](/images/ServiceManagercPanel1.png)
