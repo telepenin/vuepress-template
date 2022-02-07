@@ -123,9 +123,9 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
-          indexName: 'imunify360',
-          appId: 'C6CXTFLPAJ'
+          apiKey: "e6b9d79daf71aa98e2e2a51d4556f9d4",
+          indexName: "imunify360-unified",
+          appId: "0TCNL6CGX8"
         },
         stayInTouch: "Stay in touch",
         bottomLinks: [
