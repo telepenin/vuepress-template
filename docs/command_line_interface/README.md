@@ -622,7 +622,7 @@ Set <span class="notranslate">`MALWARE_SCAN_INTENSITY.cpu = 5`</span> configurat
 <div class="notranslate">
 
 ```
-imunify360-agent config update ‘{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}’
+imunify360-agent config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}'
 ```
 </div>
 
