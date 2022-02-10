@@ -343,3 +343,12 @@ imunify360-agent config update '{"PAM": {"exim_dovecot_protection": false, "enab
 ```
 </div>
 
+For string configuration values, such as the administrator's email address, it is necessary to use the following command format:
+
+<div class="notranslate">
+
+```
+imunify360-agent config update '{"ADMIN_CONTACTS": {"emails": ["email@domain.com"]}}'
+```
+</div>
+
