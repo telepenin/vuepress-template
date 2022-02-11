@@ -4,7 +4,7 @@
 
 ## Requirements
 
-**Supported operating system**
+**Supported operating systems**
 
 * CentOS/RHEL 6,7,8
 * CloudLinux OS 6,7,8
