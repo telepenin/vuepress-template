@@ -423,7 +423,7 @@ Or via CLI. To do so, run the following command:
 ```
 </div>
 
-## How to write custom code on WebShield
+<!-- ## How to write custom code on WebShield
 
 Starting from Imunify360 v.5.7, users can change WebShield configuration by creating custom configuration files, which will be included in general config once WebShield will start.
 
@@ -489,4 +489,5 @@ In the example the <span class="notranslate">`OPTIONS`</span> method is disabled
    HTTP/1.1 403 Forbidden
    ```
    </div>
+-->
 
