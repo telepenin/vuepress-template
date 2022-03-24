@@ -243,8 +243,6 @@ You can enable it only via CLI. To do so, run the following commands:
 
 If you want to provide intermediate certificates, they are to be appended to the certificate file.
 
-Additionally, the administrator is allowed to disable searching for the first certificate in the cache before returning the default one for non-SNI (or for non-existent domains) requests. To disable searching, in the <span class="notranslate">`/etc/imunify360-webshield/ssl.conf`</span> file set the <span class="notranslate">`lua_enable_ws_sslcache_search`</span> directive to <span class="notranslate">`off`</span>.
-
 These settings require WebShield to be restarted/reloaded.
 
 #### Manage WebShield SSL cache manually
