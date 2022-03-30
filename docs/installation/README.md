@@ -20,6 +20,7 @@
 
 * <span class="notranslate">RAM: 1GB</span>
 * <span class="notranslate">HDD: 20GB</span> available disk space
+* <span class="notranslate">CPU: 64bit</span> version on <span class="notranslate">x86_64</span> processors only
 
 **Supported hosting panels**
 
