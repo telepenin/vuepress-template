@@ -1,5 +1,7 @@
 # Installation Guide
 
+[[TOC]]
+
 ## Requirements
 
 **Supported operating systems**
