@@ -1,6 +1,4 @@
-# Billing
-
-#### Licensing
+# Licensing
 
 Imunify360 pricing depends on the users registered on the installed server:
 
