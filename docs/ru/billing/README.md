@@ -1,6 +1,6 @@
 ---
-title: Биллинг
+title: Лицензии
 ---
 <gtranslate-io>
-# Billing
+# Licensing
 </gtranslate-io>

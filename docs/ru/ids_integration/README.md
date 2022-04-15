@@ -1,13 +1,6 @@
 ---
-title: Интеграция с IDS
+title: Интеграция
 ---
 <gtranslate-io>
-# IDS Integrations
-
-## Интеграция с CSF
-
-## Интеграция с CXS
-
-## Cloudflare support
-
+# Integrations
 </gtranslate-io>
