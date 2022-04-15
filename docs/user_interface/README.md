@@ -1,4 +1,4 @@
-# Imunify360 User Interface
+# User Interface
 
 There are following tabs in the Imunify360 end user interface:
 

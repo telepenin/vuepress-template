@@ -1,4 +1,4 @@
-# Imunify360 Admin Interface
+# Admin Interface
 
 Imunify360 is an all-in-one security solution with robust cloud protection against the newest attacks, and it is available directly within your control panel (cPanel, Plesk, and DirectAdmin).
 
