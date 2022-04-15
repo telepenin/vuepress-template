@@ -2,7 +2,7 @@
 title: Интерфейс пользователя
 ---
 <gtranslate-io>
-# Imunify360 User Interface
+# User Interface
 
 ## Files
 
