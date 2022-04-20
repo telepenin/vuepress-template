@@ -226,7 +226,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "/ru/introduction/",
               "/ru/billing/",
               "/ru/installation/",
-              "/ru/update/",
               "/ru/command_line_interface/",
               "/ru/dashboard/",
               "/ru/user_interface/",
