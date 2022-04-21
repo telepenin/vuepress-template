@@ -173,10 +173,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "/user_interface/",
               "/ids_integration/",
               "/features/",
-              "/config_file_description/",
               "/whmcs_plugin/",
               "/terminology/",
               "/localization/",
+              "/config_file_description/",
               "/faq_and_known_issues/",
               "/uninstall/"
             ]
@@ -232,10 +232,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "/ru/user_interface/",
               "/ru/ids_integration/",
               "/ru/features/",
-              "/ru/config_file_description/",
               "/ru/whmcs_plugin/",
               "/ru/terminology/",
               "/ru/localization/",
+              "/ru/config_file_description/",
               "/ru/faq_and_known_issues/",
               "/ru/uninstall/"
             ]
