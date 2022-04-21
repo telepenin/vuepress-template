@@ -155,7 +155,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             },
             {
                 text: "Contact support",
-                url: "https://cloudlinux.zendesk.com/hc/en-us/requests/new"
+                url: "https://www.imunify360.com/contact/"
             },
             { text: "Blog", url: "https://blog.imunify360.com" }
         ],
@@ -214,7 +214,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             },
             {
                 text: "Техподдержка",
-                url: "https://cloudlinux.zendesk.com/hc/en-us/requests/new"
+                url: "https://www.imunify360.com/contact/"
             },
             { text: "Блог", url: "https://www.imunify360.com/blog" }
         ],
@@ -226,6 +226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "/ru/introduction/",
               "/ru/billing/",
               "/ru/installation/",
+              "/ru/update/",
               "/ru/command_line_interface/",
               "/ru/dashboard/",
               "/ru/user_interface/",
