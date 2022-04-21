@@ -104,6 +104,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     translationSource: 'docs.imunify360.com',
     defaultURL: "/introduction/",
+    submitRequestURL: "https://www.imunify360.com/support-portal/",
+    hideHeading: true,
     redirectionMapping: urls,
     sidebarDepth: 2,
     logo: "/logo.svg",
@@ -129,7 +131,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         // text for the edit-on-github link
         editLinkText: "Edit this page",
         tryFree: "Try Free",
-        submitRequest: "Submit Request",
+        submitRequest: "Contact Support",
         search: "Search",
         // config for Service Worker
         serviceWorker: {
@@ -189,7 +191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         label: "Русский",
         editLinkText: "Редактировать",
         tryFree: "Попробовать бесплатно",
-        submitRequest: "Отправить запрос",
+        submitRequest: "Служба поддержки",
         search: "Поиск",
         serviceWorker: {
           updatePopup: {
