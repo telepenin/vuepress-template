@@ -27,7 +27,7 @@
 * <span class="notranslate">cPanel</span>
 * <span class="notranslate">Plesk (Plesk</span> 17.5 or newer)
 * <span class="notranslate">DirectAdmin</span>
-* <span class="notranslate">CyberPanel</span> (only CloudLinux OS 7 and 8). See [3rd party integration guide from CyberPanel](https://cyberpanel.net/docs/how-to-install-and-use-imunify360-on-cyberpanel/).
+* <span class="notranslate">CyberPanel</span> (only CloudLinux OS 7 and 8). See [3rd party integration guide from CyberPanel](https://community.cyberpanel.net/docs?category=49&tags=cloudlinux&topic=172).
 * [No hosting panel systems](/stand_alone/)
 
 **Required browsers**
