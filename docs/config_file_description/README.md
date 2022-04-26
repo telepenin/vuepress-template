@@ -314,7 +314,7 @@ systemctl restart imunify360
 
 </div>
 
-### How to apply changes from CLI
+#### How to apply changes from CLI
 
 In order to apply changes via command-line interface (CLI), you can use the following command:
 
