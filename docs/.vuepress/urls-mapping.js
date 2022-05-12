@@ -175,5 +175,11 @@ module.exports = {
   "/ru/stand_alone/#beta-limitations": "/ru/stand_alone/#limitations",
   "/stand_alone/#integration-with-webshield": "/installation/#integration-with-webshield",
   "/agent-not-running/": "/faq_and_known_issues/#_24-imunify-agent-is-not-running-troubleshooting",
-  "/stand_alone": "/installation/#imunify360-stand-alone-non-panel-generic-panel-integration"
+  "/stand_alone": "/installation/#imunify360-stand-alone-non-panel-generic-panel-integration",
+  "/dashboard/#white-list": "/dashboard/#firewall",
+  "/dashboard/#gray-list": "/dashboard/#firewall",
+  "/dashboard/#black-list": "/dashboard/#firewall",
+  "/dashboard/#global-black-white-list-ip-management": "/dashboard/#firewall",
+  "/dashboard/#blocked-ports": "/dashboard/#ports",
+  "/stand_alone/#_2-configure-imunify360-integrations": "/installation/#_2-configure-imunify360-integrations"
 };

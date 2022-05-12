@@ -294,238 +294,48 @@ sed -ri "s/^(cmd=.*)$/\1--scan-archive/g" /etc/minidaemon/minidaemon-aibolit.cfg
 ## Firewall
 
 
-<span class="notranslate">_Lists_</span> tab allows viewing and managing the IP addresses in the lists:
+Tne <span class="notranslate">_All Lists_</span> tab allows viewing and managing the IP addresses in the following lists (listed by priority):
 
-* <span class="notranslate">White List</span> – allows to always accept IPs from the list.
-* <span class="notranslate">Gray List</span> – an auto-generated list of all the IPs blocked by Imunify360, based on Sensors alerts and alerts from the central server.
-* <span class="notranslate">Black List</span> – allows to always block IPs from the list.
-* <span class="notranslate">Blocked Ports</span> – allows to manage the list of blocked ports.
+* <span class="notranslate">White</span> - the IP will not be blocked
+* <span class="notranslate">Drop/Black</span> - the IP will be blocked everywhere, on all ports and services
+* <span class="notranslate">Captcha</span> - the IP will be blocked completely on non-web ports (SSH, FTP, etc.), and will be shown CAPTCHA on web ports (80, 443, hosting panel ports)
+* <span class="notranslate">SplashScreen</span> - the IP will be shown SplashScreen challenge on web ports, and will not be blocked on others
 
-### White List
+The counters for the lists are presented at the top of the table, reflecting the number of records matching the category.
 
-Click <span class="notranslate">_Lists_</span> in the main menu then choose <span class="notranslate">_White List_</span>.
+![](/images/Firewall.png)
 
+All the lists are available for search by the IP address as well as by the _Country_ and _Comment_ fields.
 
-![](/images/WhiteList1.png)
+The IP address can be in several lists at the same time, and the highest in priority list decides how the IP will be treated.
 
-Use filters to show the exact list of the IPs:
+Here, you can add or edit a comment to an IP, delete IP permanently or move it to the White/Black list. For an IP with full access you can also remove it here.
 
-* _IP_ – allows filtering the list by IP. Enter an IP or a part of it into the input field.
-* <span class="notranslate">_Country_</span> – allows filtering the list by country origin. Enter a country name into the input field with autocomplete. Imunify360 will show the list of IPs of the chosen country.
-* <span class="notranslate">Comments</span> – allows filtering the list by comments. Enter a comment into the input field.
-* Use <span class="notranslate">_Items per page_</span> at the page bottom right to set the number of the incidents to be shown on the page.
+The <span class="notranslate">_Ports_</span> tab allows to manage the list of blocked ports.
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
-You can perform the following actions with the IPs in the <span class="notranslate">White List</span>:
-
-* Add IP manually
-* Add a comment to IP
-* Move IP from the White List to the Black List
-* Remove IP from the White List
 
 #### How to add IP manually
 
-To add an IP to the <span class="notranslate">White List</span>, click <span class="notranslate">_Add_</span> on the right side of the page. The following pop-up opens.
+To add an IP, click <span class="notranslate">_Add_</span> on the right side of the page. The following pop-up opens.
 
-![](/images/add_ip_white.png)
+![](/images/addip.png)
 
 In the pop-up choose <span class="notranslate">_IP_</span> tab and fill out:
 
 * <span class="notranslate">_Enter IP_</span> – IP or subnet in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 * <span class="notranslate">_Enter a comment_</span> – type a comment to the IP or subnet (optional)
 * <span class="notranslate">_Enter TTL_</span> in days or hours – time to live – for how long the IP will be in the White List.
-* Choose <span class="notranslate">_White List_</span> radio button
+* Choose _White List_ or _Black List_
    * For the White List it is possible to tick <span class="notranslate">_Full Access_</span> checkbox to make this IP or subnet ignore the rules in Blocked ports. The IPs with full access have a crown icon in the IP column.
   ::: tip Note
   You can grant or remove full access afterwards in the table, just click _Cog_ icon and choose <span class="notranslate">_Grant Full Access_</span> to grant or <span class="notranslate">_Remove Full Access_</span> to remove it.
   :::
-* If the server is a part of a group (see: <span class="notranslate">[global Black | White list management](/dashboard/#global-black-white-list-ip-management)</span>, choose <span class="notranslate">_Scope: Local_</span> (IP will be added to White list on a current server) or <span class="notranslate">_Group_</span> (IP will be added to a group of servers and from this moment can be managed from any server in the group).
 
 When done, click <span class="notranslate">_Add IP_</span> to confirm your action or <span class="notranslate">_Cancel_</span> to hide pop-up.
-
-:::tip Notes
-* If you add a new server in an existing group in CLN, then all IPs whitelisted for this group will be added as whitelisted to this new server.
-* If you have an IP whitelisted globally, then this IP will be added to all servers belong to this group.
-* All actions performed with globally whitelisted IP propagate to a whole group (all servers and IPs included in this group).
-* If you remove an IP included in a group, this IP will be removed from all servers belonged to this group.
-* If you change the scope from <span class="notranslate">_Global_</span> to <span class="notranslate">_Local_</span>, then this IP on a current server becomes local and is removed from other servers of this group.
-* If you remove a server from a group in CLN, then all IPs whitelisted for the whole group will be removed from that server.
-:::
 
 You will see a notification if an IP has been added successfully.
 
 ![](/images/added_zoom80.png)
-
-#### How to add a comment to IP
-
-In the proper IP row click ![](/images/plus_icon.png) in the <span class="notranslate">_Comment_</span> column, type a comment and click ![](/images/tick_icon.png).
-
-To remove a comment, click ![](/images/pen_icon.png) and remove the text. Then click  ![](/images/tick_icon.png).
-
-#### How to move IP from the White List to the Black List
-
-To move several IPs from the <span class="notranslate">White List</span> to the <span class="notranslate">Black List</span> choose proper IPs (use checkboxes), click <span class="notranslate">_Group Actions_</span> at the top of the table and choose <span class="notranslate">_Move to Black List_</span> in the drop-down.
-
-![](/images/move_ip_zoom97.png)
-
-To move one IP address, click _Cog_ icon in a proper IP row and choose <span class="notranslate">_Move to Black List_</span> in the drop-down.
-
- ![](/images/move_ip_01.png)
-You will see a notification if the IP is moved successfully.
-
-![](/images/success.jpg)
-
-#### How to remove IP address from the White List
-
-To remove several IPs from the <span class="notranslate">White List</span>, choose proper IPs (use checkboxes) and click <span class="notranslate">_Delete permanently_</span>. Then confirm the action.
-
-![](/images/remove_zoom86.png)
-
-To remove an exact IP from the White List, just click _Bin_ icon for a proper IP address and confirm the action.
-
-You will see a notification if the IP is deleted successfully.
-
-![](/images/success_01_zoom75.png)
-
-
-#### Whitelisted trusted services
-
-Imunify360 has predefined whitelisted services. The actual list is always available on the [link](https://files.imunify360.com/static/whitelist/v2/).
-
-### Gray List
-
-Choose <span class="notranslate">_Lists_</span> tab in the main menu then click <span class="notranslate">_Gray List_</span>.
-
-![](/images/Gray_List1.png)
-
-Use filters to show the exact list of the IPs:
-
-* _IP_ – allows filtering the list by IP. Enter an IP or a part of it into the input field.
-* <span class="notranslate">_Country_</span> – allows filtering the list by country origin. Enter a country name into the input field with autocomplete. Imunify360 will show the list of IPs of the chosen country.
-* <span class="notranslate">Comments</span> – allows filtering the list by comments. Enter a comment into the input field.
-* Use <span class="notranslate">_Items per page_</span> at the page bottom right to set the number of the incidents to be shown on the page.
-
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
-You can perform the following actions with the IPs in the <span class="notranslate">Gray List</span>:
-
-* Move IP from the Gray List to the Black List
-* Move IP from the Gray List to the White List
-* Remove IP from the Gray List
-
-#### How to move IP from the Gray List to the Black List
-
-To move several IPs from the <span class="notranslate">Gray List</span> to the <span class="notranslate">Black List</span> choose proper IPs (use checkboxes), click <span class="notranslate">_Group Actions_</span> at the top of the table and choose <span class="notranslate">_Move to Black List_</span> in the drop-down. Then confirm the action.
-
-![](/images/gray_moved_black.png)
-
-To move one IP address, click _Cog_ icon in a proper IP row and choose <span class="notranslate">_Move to Black List_</span> in the drop-down. Then confirm the action.
-
- ![](/images/gray_moved_black_one.png)
-
-You will see a notification if the IP is moved successfully.
-
-![](/images/success.jpg)
-
-#### How to move IP from the Gray List to the White List
-
-To move several IPs from the <span class="notranslate">Gray List</span> to the <span class="notranslate">White List</span> choose proper IPs (use checkboxes), click <span class="notranslate">_Group Actions_</span> at the top of the table and choose <span class="notranslate">_Move to White List_</span> in the drop-down. Then confirm the action.
-
-![](/images/gray_moved_white.png)
-
-To move one IP address, click _Cog_ icon in a proper IP row and choose <span class="notranslate">_Move to White List_</span> in the drop-down. Then confirm the action.
-
- ![](/images/gray_moved_white_one.png)
-
-You will see a notification if the IP is moved successfully.
-
-![](/images/success.jpg)
-
-
-#### How to remove IP from the Gray List
-
-To remove several IPs from the <span class="notranslate">Gray List</span>, choose IPs in the list (use checkboxes) and click <span class="notranslate">_Delete permanently_</span>. Then confirm the action.
-
-![](/images/remove_ip_fro_gray.png)
-
-To remove an exact IP, click _Bin_ icon for a proper IP row and confirm the action.
-
-![](/images/remove_ip_from_gray_one.png)
-
-You will see a notification if the IP is removed successfully.
-
-![](/images/success_01_zoom76.png)
-
-### Black List
-
-Choose <span class="notranslate">_Lists_</span> tab in the main menu then click <span class="notranslate">_Black List_</span>.
-
-![](/images/Black_List1.png)
-
-Use filters to show the exact list of the IPs:
-
-* _IP_ – allows filtering the list by IP. Enter an IP or a part of it into the input field.
-* <span class="notranslate">_Country_</span> – allows filtering the list by country origin. Enter a country name into the input field with autocomplete. Imunify360 will show the list of IPs of the chosen country.
-* <span class="notranslate">Comments</span> – allows filtering the list by comments. Enter a comment into the input field.
-* Use <span class="notranslate">_Items per page_</span> at the page bottom right to set the number of the incidents to be shown on the page.
-
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
-The following actions are available with IPs in the <span class="notranslate">Black List</span>:
-
-* Add IP manually
-* Add a country
-* Add comments to IP
-* Move IP from the <span class="notranslate">Black List</span> to the <span class="notranslate">White List</span>
-* Remove IP manually
-
-#### How to add IP manually
-
-To add an IP to the <span class="notranslate">Black List</span> click <span class="notranslate">_Add_</span> on the right side of the page.
-
-In the pop-up choose <span class="notranslate">_IP_</span> tab and fill out:
-
-* <span class="notranslate">_Enter IP_</span> – IP or subnet in [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
-* <span class="notranslate">_Enter a comment_</span> – type a comment to the IP or subnet (optional)
-* <span class="notranslate">_Enter TTL_</span> in days or hours – time to live – for how long the IP will be in the Black List.
-* Choose <span class="notranslate">_Black List_</span> radio button
-* If the server is a part of a group (see: <span class="notranslate">[global Black | White list management](/dashboard/#global-black-white-list-ip-management)</span>), choose <span class="notranslate">_Scope: Local_</span> (IP will be added to Black list on a current server) or <span class="notranslate">_Group_</span> (IP will be added to a group of servers and from this moment can be managed from any server in the group).
-
-:::tip Notes
-* If you add a new server in an existing group in CLN, then all IPs blacklisted for this group will be added as blacklisted to this new server.
-* If you have an IP blacklisted globally, then this IP will be added to all servers belong to this group.
-* All actions performed with globally blacklisted IP propagate to a whole group (all servers and IPs included in this group).
-* If you remove an IP included in a group, this IP will be removed from all servers belonged to this group.
-* If you change the scope from <span class="notranslate">_Global_</span> to <span class="notranslate">_Local_</span>, then this IP on a current server becomes local and is removed from other servers of this group.
-* If you remove a server from a group in CLN, then all IPs blacklisted for the whole group will be removed from that server.
-:::
-
-When done, click <span class="notranslate">_Add IP_</span> to confirm your action or <span class="notranslate">_Cancel_</span> to close the pop-up.
-
-![](/images/add_ip_black_zoom81.png)
-
-You will see a notification if the IP is added successfully.
-
-![](/images/added_zoom92.png)
-
-If <span class="notranslate">_Show only manually added_</span> switcher is disabled (default setting) than IPs automatically blocked by Imunify360 without access to CAPTCHA are displayed in the <span class="notranslate">Black List</span> along with manually added IPs. They have _**Imunify360**_ in the <span class="notranslate">**Source**</span> column and <span class="notranslate">_**Automatically blocked due to distributed attack**_</span> in <span class="notranslate">**Comment**</span> column.
-
-
-::: tip Note
-Regardless of switched CSF off or on, blocked by Imunify360 IPs exist along with CSF deny list. Warning displayed at the top of the table says that CSF is running and can be used for blacklisting along with Imunify360.
-:::
-
-:::warning Warning
-For now, ipset supports only IPv6/64 networks. In most cases, it is enough to specify the mask `/64`. An example of 
- a proper IPv6 address with the subnet mask: `2001:db8:abcd:0012::0/64`.
-:::
 
 #### How to add a country manually
 
@@ -544,66 +354,7 @@ You will see a notification if a country has been added successfully.
 
 ![](/images/sucess_country_zoom82.png)
 
-#### How to add a comment to IP
-
-In the proper IP row click ![](/images/plus_icon.png) in the <span class="notranslate">_Comment_</span> column, type a comment and click ![](/images/tick_icon.png).
-
-To remove a comment, click ![](/images/pen_icon.png) and remove the text. Then click  ![](/images/tick_icon.png).
-
-#### How to move IP from the Black List to the White List
-
-To move IP from the <span class="notranslate">Black List</span> to the <span class="notranslate">White List</span>, choose proper IPs in the list (use checkboxes), click <span class="notranslate">_Group Actions_</span> at the top of the table and choose <span class="notranslate">_Move to White List_</span> in the drop-down. Then confirm the action.
-
-![](/images/move_ip_black.png)
-
-To move an exact IP, just click the _Cog_ icon in a proper IP row and choose <span class="notranslate">_Move to White List_</span> in the drop-down. Then confirm the action.
-
- ![](/images/move_black.png)
-You will see a notification if an IP is moved to the <span class="notranslate">White List</span> successfully.
-
-![](/images/success.jpg)
-
-#### How to remove IP from the Black List
-
-To remove IP from the <span class="notranslate">Black List</span>, choose proper IPs in the table (use checkboxes) and click <span class="notranslate">_Delete permanently_</span>. Then confirm the action.
-
-![](/images/delete_permanently.png)
-To remove an exact IP, just click _Bin_ icon in the proper IP row. Then confirm the action.
-
-You will see a notification if an IP is successfully removed.
-
-![](/images/success_01_zoom75.png)
-
-See also: [How to use external files with the list of Black/White IPs](/features/#external-black-whitelist-management)
-
-### Global Black/White list IP management
-
-Administrator can manage IPs globally, this means that you can blacklist or whitelist an IP not only on one server but on a group of servers. 
-
-Prior to manage IPs globally, you should create a group and add servers into it. This can be done via [CLN UI](https://cln.cloudlinux.com/). You can find the complete documentation on how to create and manage servers’ groups [here](https://docs.cln.cloudlinux.com/dashboard/#server-groups).
-
-When you have created a group in CLN and added IPs into this group, go to _Imunify360 > Firewall > White list_ or _Black list_.
-You will see the _Scope_ column and controls (on clicking the _Add_ button) to manage IP locally (on a current server) or globally (on a group of servers).
-
-![](/images/global_IP_management.png)
-
-#### How to change Scope to Group/Local
-
-To change the scope to <span class="notranslate">_Group/Local_</span>, first [create your groups](https://docs.cln.cloudlinux.com/dashboard/#how-to-add-a-server-to-a-group) in the CLN.
-
-![](/images/CLNGroups.png)
-
-After that, go to <span class="notranslate">_Firewall > White/Black list_</span> and select an IP.
-
-
-* In the <span class="notranslate">_Actions_</span> column click ![](/images/gear.png).
-* Choose <span class="notranslate">_Change scope to Group/Local_</span>.
-* In the opened popup click <span class="notranslate">_Yes, change scope to Group/Local_</span> or click <span class="notranslate">_Cancel_</span> to close the popup.
-
-![](/images/change_scope.png)
-
-
-### Blocked Ports
+### Ports
 
 This feature allows to block specific ports for TCP/UDP connection. It is also possible to add specific IPs or subnet as a whitelisted so that the rule for the port will not work.
 
@@ -676,12 +427,6 @@ To add an IP or a subnet to the <span class="notranslate">White List</span> for 
 * Enter description – a description to be added as a note to the IP or subnet.
 
 ![](/images/add_ip_ports.png)
-
-#### Add a comment
-
-In the proper port row click ![](/images/plus_icon.png) in the <span class="notranslate">_Note_</span> column, type a comment and click ![](/images/tick_icon.png).
-
-To remove a comment, click ![](/images/pen_icon.png) and remove the text. Then click  ![](/images/tick_icon.png).
 
 
 #### Delete permanently

@@ -213,8 +213,8 @@ to request CAPTCHA again</td></tr>
 <td># intensity level for CPU consumption. Can be set from 1 to 7, default is 2</td></tr>
 <tr><td><span class="notranslate">io: 2</span></td>
 <td># intensity level for file operations. Can be set from 1 to 7, default is 2</td></tr>
-<tr><td><span class="notranslate">ram: 2048</span></td>
-<td># intensity level for RAM consumption. Minimum value is 1024, default is 2048</td></tr>
+<tr><td><span class="notranslate">ram: 1024</span></td>
+<td># intensity level for RAM consumption. The default value is 1024</td></tr>
 <tr>
 <th colspan="2" align="left"><span class="notranslate">MALWARE_SCAN_SCHEDULE:</span></th></tr>
 <tr><td><span class="notranslate">day_of_month: &lt;next day after installation&gt;</span></td>
