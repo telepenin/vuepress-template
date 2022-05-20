@@ -860,7 +860,8 @@ else {
 </div>
 
 :::tip Note
-This script is available starting from Imunify360 v. 4.10.2
+This script is available starting from Imunify360 v. 4.10.2  
+This script will only check for PD if file_get_contents is not disabled and allow_url_fopen is enabled in the PHP settings on the server.
 :::
 
 3. Place this file on the server.
