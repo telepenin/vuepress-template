@@ -176,6 +176,7 @@ module.exports = {
   "/stand_alone/#integration-with-webshield": "/installation/#integration-with-webshield",
   "/agent-not-running/": "/faq_and_known_issues/#_24-imunify-agent-is-not-running-troubleshooting",
   "/stand_alone": "/installation/#imunify360-stand-alone-non-panel-generic-panel-integration",
+  "/stand_alone/": "/installation/#imunify360-stand-alone-non-panel-generic-panel-integration",
   "/dashboard/#white-list": "/dashboard/#firewall",
   "/dashboard/#gray-list": "/dashboard/#firewall",
   "/dashboard/#black-list": "/dashboard/#firewall",
