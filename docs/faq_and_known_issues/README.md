@@ -612,7 +612,7 @@ First, remove an IP from the White list:
 
 </div>
 
-After that, run the following loop which triggers ModSecurity test rule 5 times in a row that leads to graylisting of the IP due to the sequence of 403 HTTP errors:
+After that, run the following loop which triggers ModSecurity test rule 5 times in a row that leads to graylisting of the IP due to the sequence of 406 HTTP errors:
 
 <div class="notranslate">
 
