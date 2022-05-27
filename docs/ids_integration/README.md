@@ -749,3 +749,10 @@ During installation on DirectAdmin, Imunify360 will try to install <span class="
 ::: tip Note
 Automatic installation of Imunify360 ruleset is only supported with custombuild 2.0.
 :::
+   
+The following values in the custombuild configuration are required for the installation of Imunify360 ModSecurity ruleset:
+
+```
+modsecurity=yes
+modsecurity_ruleset=no
+```
