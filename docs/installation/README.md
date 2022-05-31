@@ -422,8 +422,8 @@ It should point to an executable file that accepts as an input a list of domain-
 <div class="notranslate">
 
 ``` json
-{"user": "username", "domain": "example.com", "config": "modsec config text"}
-{"user": "another", "domain": "another.example.com", "config": "..."}
+{"user": "username", "domain": "example.com", "content": "modsec config text"}
+{"user": "another", "domain": "another.example.com", "content": "..."}
 ```
 </div>
  
