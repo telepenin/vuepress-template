@@ -312,7 +312,7 @@ Imunify360 Stand-alone version require the following integrations before install
 * Integration with authentication service
 * Define administrators for Imunify360
 
-All integrations set in the integration config file like <span class="notranslate">`/etc/sysconfig/imunify360/integration.conf`</span>. You can find more details on config file [here](/stand_alone/#integration-config-file).
+All integrations set in the integration config file like <span class="notranslate">`/etc/sysconfig/imunify360/integration.conf`</span>. You can find more details on config file [here](/installation/#integration-config-file).
 
 #### Integration with web server
       
