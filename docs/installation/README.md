@@ -53,8 +53,8 @@ On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</s
 
 
 2. Setup or install the prerequisites required for your environment if any.
-   * [cPanel  hosting panel](/hosting_panels_specific_settin/#cpanel)
-   * [Plesk hosting panel](/hosting_panels_specific_settin/#plesk)
+   * [cPanel  hosting panel](/ids_integration/#cpanel)
+   * [Plesk hosting panel](/ids_integration/#plesk)
    * [Stand-alone version (no hosting panel)](/stand_alone/)
    * On  <span class="notranslate">Debian 10</span>, enable  <span class="notranslate">`buster-backports`</span>:
   
