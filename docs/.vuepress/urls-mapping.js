@@ -182,5 +182,6 @@ module.exports = {
   "/dashboard/#black-list": "/dashboard/#firewall",
   "/dashboard/#global-black-white-list-ip-management": "/dashboard/#firewall",
   "/dashboard/#blocked-ports": "/dashboard/#ports",
-  "/stand_alone/#_2-configure-imunify360-integrations": "/installation/#_2-configure-imunify360-integrations"
+  "/stand_alone/#_2-configure-imunify360-integrations": "/installation/#_2-configure-imunify360-integrations",
+  "/webshield/#configuring-recaptcha-keys": "/features/#configuring-recaptcha-keys"
 };
