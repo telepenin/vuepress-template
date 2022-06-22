@@ -44,19 +44,20 @@ Specifying IPs in those files will not prevent Imunify from adding the same IPs 
 
 ## RapidScan
 
-RapidScan feature allows you to increase scanning speed by lowering system resource usage and gives you an opportunity to scan more frequently, further hardening your systems’ security posture.
+The RapidScan feature increases scanning speed by lowering system resource usage. Increased scanning speeds and a higher scanning rate further hardens system security posture.
 
 #### RapidScan techniques
 
-* **Faster File Integrity Checking**. File metadata, such as file hashes, are stored locally. This means that unchanged files don't need to be rescanned.
-* **Efficient Cloud-assisted Scanning**. Imunify360 stores its malicious file hash database in the cloud. We detect malicious files and skip white-listed files. The remaining files are fewer, so the overall scan time is significantly reduced.
-* **Optimized Malware Signatures**. Our malware signature database continually expands to match the variety of malicious software. While the database becomes more accurate and comprehensive, it also becomes larger and more cumbersome to index. We tackle this by actively curating the database and re-evaluating complex signatures, recasting any that affect scanning performance.
+* **Faster File Integrity Checking**. File metadata - file hashes are stored locally. This means that if the file didn't change since the last scan it won't need to be re-scanned.
+* **Efficient Cloud-assisted Scanning**. Imunify360 stores its malicious file hash database in the cloud. Cloud assistance helps to detect malicious files and skip well known files that were white-listed. This means that only unfamiliar files remain to be scanned locally, resulting in significantly reduced scan times.
+* **Optimized Malware Signatures**. Our malware signature database continually grows to reflect the ever-expanding variety of malicious software. As the database becomes more accurate and comprehensive, it also becomes larger and more cumbersome to index. We tackle this by actively curating the database and re-evaluating complex signatures, recasting any of them that could be improved in order to make a positive effect on scanning performance.
  
-#### What does it mean to you?
+#### What does it mean for you?
 
-When you first enable the RapidScan feature, the first scan will run as before. But subsequent scans will see a speed improvement, anywhere between 5 to 20 times faster. This is the case for both on-demand and scheduled scans, and means you can afford more scans without affecting system performance.
+After enabling  the RapidScan feature, the next scan runs with the usual speed. However, the subsequent scans speeds will improve, and they will run anywhere between 5 to 20 times faster. This is the case for both on-demand and scheduled scans, and it means, among other things, you can can increase scan frequency without affecting system performance.
 
-To take advantage of these new improvements, go to your Imunify360 control panel and enable RapidScan in Settings→Malware Scanner. See details [here](/dashboard/#malware).
+To take advantage of this feature, go to your Imunify360 control panel and enable RapidScan in Settings→Malware Scanner. Please see the details
+ [here](/dashboard/#malware).
 
 ## Low Resource Usage mode
 
