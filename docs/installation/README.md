@@ -28,7 +28,7 @@
 * <span class="notranslate">Plesk (Plesk</span> 17.5 or newer)
 * <span class="notranslate">DirectAdmin</span>
 * <span class="notranslate">CyberPanel</span> (only CloudLinux OS 7 and 8). See [3rd party integration guide from CyberPanel](https://community.cyberpanel.net/docs?category=49&tags=cloudlinux&topic=172).
-* [No hosting panel systems](/stand_alone/)
+* Generic hosting panel ([Configuration required](/stand_alone/))
 
 **Required browsers**
 
@@ -45,18 +45,9 @@
 
 ## Installation Instructions
 
-:::warning Warning
-On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</span> PHP function to be enabled. If you are unable to open the Imunify UI, you might see a related message in the web server error log. If so, please remove it from the <span class="notranslate">`disable_functions`</span> list in <span class="notranslate">`php.ini`</span>.
-:::
-
-1. Get your license key at [https://www.imunify360.com/](https://www.imunify360.com/). You can purchase it or get a trial key from a received email.
-
-
-2. Setup or install the prerequisites required for your environment if any.
-   * [cPanel  hosting panel](/ids_integration/#cpanel)
-   * [Plesk hosting panel](/ids_integration/#plesk)
-   * [Stand-alone version (no hosting panel)](/stand_alone/)
-   * On  <span class="notranslate">Debian 10</span>, enable  <span class="notranslate">`buster-backports`</span>:
+::: tip Debian 10 note
+On  <span class="notranslate">Debian 10</span>, <span class="notranslate">`buster-backports`</span> should be enabled
+before installation:
   
 <div class="notranslate">
 
@@ -64,27 +55,19 @@ On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</s
 echo "deb http://ftp.debian.org/debian buster-backports main" > /etc/apt/sources.list.d/backports.list
 apt-get update
 ```
-
 </div>
-  
-:::warning Warning
-Plesk does not have full support for backports repository. It is recommended to disable it after Imunify360 is installed.
 :::
 
-1. Log in with root privileges to the server where Imunify360 should be installed.
+1. Get your license key at [https://www.imunify360.com/](https://www.imunify360.com/). You can purchase it or get a trial key from a received email.
 
-2. Go to your home directory and run the commands:
+2. Log in with root privileges to the server where Imunify360 should be installed.
+
+3. Go to your home directory and run the commands:
 
 <div class="notranslate">
 
 ```
 wget https://repo.imunify360.cloudlinux.com/defence360/i360deploy.sh -O i360deploy.sh
-```
-
-</div>
-<div class="notranslate">
-
-```
 bash i360deploy.sh --key YOUR_KEY
 ```
 
@@ -102,17 +85,7 @@ bash i360deploy.sh --key YOUR_KEY --beta
 
 </div>
 
-where <span class="notranslate">`YOUR_KEY`</span> is your license key. Replace <span class="notranslate">`YOUR_KEY `</span> with the actual key - trial or purchased at [https://www.imunify360.com/](https://www.imunify360.com/).
-
 If you have an IP-based license, run the same script with no arguments:
-
-<div class="notranslate">
-
-```
-wget https://repo.imunify360.cloudlinux.com/defence360/i360deploy.sh -O i360deploy.sh
-```
-
-</div>
 
 <div class="notranslate">
 
@@ -204,6 +177,9 @@ yum install policycoreutils-python-utils
 
 </div>
 
+### Troubleshooting
+
+On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</span> PHP function to be enabled. If you are unable to open the Imunify UI, you might see a related message in the web server error log. If so, please remove it from the <span class="notranslate">`disable_functions`</span> list in <span class="notranslate">`php.ini`</span>.
 
 ## Compatibility
 
