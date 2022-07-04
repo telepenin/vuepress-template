@@ -1,7 +1,7 @@
 # Introduction
 
 
-Imunify360 is the security solution for Linux web servers based on machine learning technology which utilizes a milti-layer approach to provide total protection against any types of malicious attacks or abnormal behavior including distributed brute force attacks.
+Imunify360 is the security solution for Linux web servers based on machine learning technology which utilizes a multi-layer approach to provide total protection against any types of malicious attacks or abnormal behavior including distributed brute force attacks.
 
 Imunify360 provides:
 
