@@ -871,7 +871,7 @@ This script will only check for PD if file_get_contents is not disabled and allo
 7. If <span class="notranslate">Proactive Defense</span> is enabled and <span class="notranslate">_Kill mode_</span> is set, the test page returns an error.And a new event with description "Blamer detection" in the <span class="notranslate">_Detected Events_</span> table with "KILL" action.
 
 ::: tip Note
-the number of triggered rule is 24 and it is possible to check it via CLI
+the number of triggered rule is 77777 and it is possible to check it via CLI
 <div class="notranslate">
 
 ```
