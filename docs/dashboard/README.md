@@ -841,7 +841,16 @@ See also: [How to edit watched and excluded patterns for Malware Scanner?](/faq_
 #### How to test Proactive Defense
 
 1. Set <span class="notranslate">Proactive Defense</span> to <span class="notranslate">_Log only_</span> mode (requests will not be blocked) or to <span class="notranslate">_Kill mode_</span> to kill all requests.
-2. Create a file with the following content:
+2. Add the following row in order to enable test mode rules:
+
+<div class="notranslate">
+	
+```	
+echo 'check_mode = -10' >> /usr/share/i360-php-opts/module.ini
+```
+</div>
+
+3. Create a file with the following content:
 
 <div class="notranslate">
 
@@ -864,11 +873,19 @@ This script is available starting from Imunify360 v. 4.10.2
 This script will only check for PD if file_get_contents is not disabled and allow_url_fopen is enabled in the PHP settings on the server.
 :::
 
-3. Place this file on the server.
-4. Call a test page with the script from the point 2.
-5. If <span class="notranslate">Proactive Defense</span> is disabled, you will see "PD doesn't work or not in KILL mode" message after calling the script and no records will appear in "Incident" tab.
-6. If <span class="notranslate">Proactive Defense</span> is enabled and <span class="notranslate">_Log only_</span> mode is set, you will see "PD doesn't work or not in KILL mode" message after calling the script and a new event with description "Blamer detection" in the <span class="notranslate">_Detected Events_</span> table with "LOG" action.
-7. If <span class="notranslate">Proactive Defense</span> is enabled and <span class="notranslate">_Kill mode_</span> is set, the test page returns an error.And a new event with description "Blamer detection" in the <span class="notranslate">_Detected Events_</span> table with "KILL" action.
+4. Place this file on the server.
+5. Call a test page with the script from the point 2.
+6. If <span class="notranslate">Proactive Defense</span> is disabled, you will see "PD doesn't work or not in KILL mode" message after calling the script and no records will appear in "Incident" tab.
+7. If <span class="notranslate">Proactive Defense</span> is enabled and <span class="notranslate">_Log only_</span> mode is set, you will see "PD doesn't work or not in KILL mode" message after calling the script and a new event with description "Blamer detection" in the <span class="notranslate">_Detected Events_</span> table with "LOG" action.
+8. If <span class="notranslate">Proactive Defense</span> is enabled and <span class="notranslate">_Kill mode_</span> is set, the test page returns an error.And a new event with description "Blamer detection" in the <span class="notranslate">_Detected Events_</span> table with "KILL" action.
+9. Remove the following row from the <span class="notranslate">`/usr/share/i360-php-opts/module.ini`</span> in order to disable test mode rules
+
+<div class="notranslate">
+	
+```
+check_mode = -10
+```
+</div>
 
 ::: tip Note
 the number of triggered rule is 77777 and it is possible to check it via CLI
