@@ -1,5 +1,15 @@
 # Email
 
+#### Imunify Email compatibility
+
+Imunify Email has been checked for compatibility with following tools and mail gateways:
+
+* Config Server Services
+  * [MailScanner](https://configserver.com/cp/osm.html)
+  * [Firewall](https://configserver.com/cp/csf.html)
+* [MailChannels](https://www.mailchannels.com/) from IE 0.6 version
+* SpamAssassin (incoming and outgoing configuration)
+* [Smtp2go](https://www.smtp2go.com/)
 
 ### Installation
 
@@ -16,7 +26,8 @@ Imunify Email Beta is simple to install.
 At the moment, it runs on the following distributions:
 
 * CentOS 7,8 with support of cPanel/WHM control panel.
-* CloudLinux OS 7,8 with support of cPanel/WHM control panel. 
+* CloudLinux OS 7,8 with support of cPanel/WHM control panel.
+* AlmaLinux 8 with support of cPanel/WHM control panel.
 
 Minimum system requirements for installation:
 * x64 | 512 Mb** | 20 Gb disk space ***
@@ -83,6 +94,14 @@ In order to access the UI as a hosting administrator, navigate to WHM -> Plugins
 Your clients will be able to access the Imunify Email Quarantine under: cPanel -> Security -> Imunify360 -> Email.
 
 ### Managing Imunify Email
+
+#### Check Imunify Email version
+
+To find out which version of Imunify Email is installed, run the following command as root:
+
+```
+ie-config version
+```
 
 #### Check status
 
