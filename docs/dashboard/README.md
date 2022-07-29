@@ -1630,9 +1630,15 @@ To enable backups log in to a hosting panel as administrator, go to Imunify360 p
 
 <span class="notranslate">CloudLinux Backup</span> option provides a customer with the most integrated with Imunify360 backup feature. It is powered by the Acronis technology, but you do not need to have an active Acronis account (if you have an existing Acronis account and would like to continue using it, skip to the <span class="notranslate">Acronis Backup</span> section for choosing an <span class="notranslate">Acronis Backup</span> option).
 
-<span class="notranslate">CloudLinux Backup</span> offers 10 GB of free storage space, and you can purchase additional space as needed.
+:::warning Warning
+On servers with **XFS**, ReiserFS3, ReiserFS4, JFS, CloudLinux Backup has the following limitations:
 
-With this backup and restore service, you can restore malicious or suspicious files from the backup if a clean version exists, schedule backups, see total and used storage space, and locate the data storage server. You can learn more about the <span class="notranslate">CloudLinux Backup</span> for Imunify360 [here](https://www.imunify360.com/cloudlinux-backup).
+- Files cannot be excluded from a disk backup
+- Fast incremental/ differential backup cannot be enabled
+- Volumes cannot be resized during a recovery
+:::
+
+With this backup and restore service, you can restore malicious or suspicious files from the backup if a clean version exists, schedule backups, see total and used storage space, and locate the data storage server.
 
 To activate <span class="notranslate">CloudLinux Backup</span>, follow the next simple steps:
 * Select <span class="notranslate">_CloudLinux Backup_</span> in the dropdown
