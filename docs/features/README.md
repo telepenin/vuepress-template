@@ -881,7 +881,7 @@ Here is an example of custom server configuration:
 
 | | |
 |-|-|
-|<span class="notranslate">`imunify360-base.config`</span><br><br>Provided by Imunify installation. Contains default recommended configuration|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '8880'`<br><span class="notranslate">`port_blocking_mode: ALLOW`</span>|
+|<span class="notranslate">`imunify360.config.defaults.example`</span><br><br>Contains an example of default configuration values.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '8880'`<br><span class="notranslate">`port_blocking_mode: ALLOW`</span>|
 |<span class="notranslate">`imunify360.config.d/50-common.config`</span><br><br>Provisioned by server owner to the fleet of servers.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '21'`<br><span class="notranslate">`port_blocking_mode: DENY`</span>|
 |<span class="notranslate">`imunify360.config.d/90-local.config`</span><br><br>Contains local customization per server individually.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '22'`<br>`- '12345'`|
 
