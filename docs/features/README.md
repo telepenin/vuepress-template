@@ -862,13 +862,26 @@ Starting from Imunify360 v.5.8, we introduce the overridable config which provid
 
 **Configs organization**:
 
-* A new directory for custom configs. The local overrides of the main config are put there: <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config.d/`</span>
+* A new directory for custom configs. The local overrides of Imunify360 config are put there: <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config.d/`</span>
 * The old config <span class="notranslate">`/etc/sysconfig/imunify360/imunify360.config`</span> is now linked to the <span class="notranslate">`imunify360.config.d/90-local.config`</span>. It contains changes made through UI as well as through CLI.
-* Configs in that directory will override the <span class="notranslate">`imunify360-base.config`</span> and each other in lexical order. First-level "sections" (like <span class="notranslate">`FIREWALL`</span>) are merged, while second-level "options" (like <span class="notranslate">`FIREWALL.TCP_IN_IPv4`</span>) are replaced completely.
+* Default Imunify360 configuration is written at `imunify360.config.defaults.example`. Modifying this config won't affect config merging behavior in any way, so please refrain from changing it.
+* Configs in that directory will override the <span class="notranslate">`imunify360.config.defaults.example`</span> and each other in lexical order. First-level "sections" (such as <span class="notranslate">`FIREWALL`</span>) are merged, while second-level "options" (such as <span class="notranslate">`FIREWALL.TCP_IN_IPv4`</span>) are replaced completely.
+* <span class="notranslate">`imunify360.config.d/10_on_first_install.config`</span> is a config that is supplied by Imunify360. Its purpose is to let us - Imunify360 developers - enable new features only on new installations without forcing existing installation to see new feature enabled on the update. This config should not be modified manually.
 
-This way you can keep your local customizations, but still be able to rollout the main config.
+This way you can keep your local customizations, and still be able to rollout your main config. 
 
-The CLI command to check the default configuration before merging with <span class="notranslate">`90-local.config`</span>:
+The following CLI command can be used to check current server configuration:
+
+<div class="notranslate">
+
+```
+imunify360-agent config show
+```
+</div>
+	
+Current server configuration is also present at <span class="notranslate">`/etc/sysconfig/imunify360/imunify360-merged.config`</span> path.
+	
+The following CLI command:
 
 <div class="notranslate">
 
@@ -876,12 +889,18 @@ The CLI command to check the default configuration before merging with <span cla
 imunify360-agent config show defaults
 ```
 </div>
+	
+can be used to check server configuration in the following states:
 
+- <span class="notranslate">`mutable_config`</span> represents config state before applying <span class="notranslate">`imunify360.config.d/90-local.config`</span>,
+- <span class="notranslate">`local_config`</span> represents parsed <span class="notranslate">`imunify360.config.d/90-local.config`</span> config,
+- <span class="notranslate">`immutable_config`</span> represents merged configs which come after <span class="notranslate">`imunify360.config.d/90-local.config`</span> in lexical order.
+	
 Here is an example of custom server configuration:
 
 | | |
 |-|-|
-|<span class="notranslate">`imunify360.config.defaults.example`</span><br><br>Contains an example of default configuration values.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '8880'`<br><span class="notranslate">`port_blocking_mode: ALLOW`</span>|
+|<span class="notranslate">`imunify360.config.defaults.example`</span><br><br>Provided by Imunify installation. Contains default recommended configuration|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '8880'`<br><span class="notranslate">`port_blocking_mode: ALLOW`</span>|
 |<span class="notranslate">`imunify360.config.d/50-common.config`</span><br><br>Provisioned by server owner to the fleet of servers.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '21'`<br><span class="notranslate">`port_blocking_mode: DENY`</span>|
 |<span class="notranslate">`imunify360.config.d/90-local.config`</span><br><br>Contains local customization per server individually.|<span class="notranslate">`FIREWALL:`</span><br><span class="notranslate">`TCP_IN_IPv4:`</span><br>`- '20'`<br>`- '22'`<br>`- '12345'`|
 
