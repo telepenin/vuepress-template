@@ -156,8 +156,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 url: "https://www.imunify360.com/getting-started"
             },
             {
-                text: "Contact support",
-                url: "https://www.imunify360.com/contact/"
+                text: "Submit request",
+                url: "https://cloudlinux.zendesk.com/hc/en-us/requests/new"
             },
             { text: "Blog", url: "https://blog.imunify360.com" }
         ],
