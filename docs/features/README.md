@@ -383,14 +383,6 @@ service imunify360-webshield restart
 ```
 </div>
 
-#### Setting the WebShield "Server" header
-
-Sometimes it's desired to change the WebShield "Server" header to something that suits certain requirements.
-
-To do so, locate the <span class="notranslate">`more_set_headers`</span> directive in the <span class="notrabslate">`/etc/imunify360-webshield/webshield.conf`</span> file.
-
-By default, the directive contains the <span class="notranslate">`"Server: imunify360-webshield/1.8";`</span> value. You can set string after the colon to whatever suits your needs.
-
 
 ### Captcha
 
