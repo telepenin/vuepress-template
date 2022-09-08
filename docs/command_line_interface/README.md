@@ -1775,9 +1775,15 @@ The <span class="notranslate">`imunify360-agent notifications-config show`</span
 
 </div>
 
-#### Example of script to create custom scripts to use with notifications-config
+#### Example of scripts to create custom notifications
 
-There are two script examples you can download:
+Simple and generic scripts aiming to be a reference/template to create custom scripts to use with imunify-notifier.
+
+**For notifications subsystem:**
+
+* [Shell script](/notification_script.sh)
+
+**For hooks subsystem:**
 
 * [Shell script](/hook_script.sh)
 * [Python script](/hook_script.py)
