@@ -2483,6 +2483,39 @@ where `12.34.56.78` is that specific IP address.
    ```
 
 </div>
+	
+7. The <span class="notranslate">`--json`</span> key can be used to get additional details about the IP address. For example, whether it has full access on the server or has just been added to a whitelist:
+
+<div class="notranslate">
+
+   ```
+   imunify360-agent whitelist ip list --by-ip 1.2.3.4 -v --json
+   ...
+    {
+      "auto_whitelisted": false,
+      "comment": "Manually added on 2022-09-05 05:16:54",
+      "country": {
+        "code": "US",
+        "id": "1234001",
+        "name": "United States"
+    },
+      "ctime": 1662355015,
+      "deep": null,
+      "expiration": 0,
+      "full_access": true,
+      "imported_from": null,
+      "ip": "1.2.3.4",
+      "listname": "WHITE",
+      "manual": true,
+      "netmask": 1234967295,
+      "network_address": 123495478,
+      "scope": "local",
+      "version": 4
+    }
+   ...
+   ```
+
+</div>
  
 To whitelist multiple IP addresses, put them into a file and add to the white list as follows:
 
