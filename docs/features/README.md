@@ -186,6 +186,67 @@ Note that the plugin has three separate counters and a set of settings for USER/
 * If an IP is blocked by <span class="notranslate">`IP_LOCK_ATTEMPTS`</span>, then all users will not have access to the server from that specific blocked IP
 :::
 
+### Dovecot native brute force protection
+
+Dovecot native brute force protection module improves stability and resolves issues that standard PAM caused in some cases
+
+There were situations when login with enabled PAM would produce log messages like these:
+
+```
+Jun 9 14:45:04 Hostl6 dovecot: auth-worker(31382): Error: pam(user@example.org,<IP>,<SESSION>): Multiple password values not supported
+```
+```
+Jun 9 14:45:10 Hostl6 dovecot: pop3-login: Disconnected (auth failed, 1 attempts in 6 secs): user=<user@example.org>, method=PLAIN, rip=<IP>, lip=<IP>, TLS, session=<SESSION>
+```
+
+This happened due to the specificity of PAM’s architecture and the way it processes such cases. We decided to develop a completely new native module for Dovecot with brute force protection functionality. With the new module, Dovecot will not produce any more error messages similar to shown above.
+
+Since the module is fresh, it is in experimental mode – disabled by default for now. This will be changed to “enabled by default” state in later releases.
+
+Now two options can be used to control how brute force protection works for Dovecot:
+
+<table>
+	<tr>
+	    <th colspan="2">Condition</th>
+	    <th rowspan="2">Behavior</th>
+	</tr >
+	<tr >
+	    <td>typePAM.exim_dovecot_protection</td>
+	    <td>PAM.exim_dovecot_native</td>
+	</tr>
+  	<tr >
+	    <td><center>false</center></td>
+	    <td><center>any</center></td>
+      <td>Dovecot protection <b>disabled</b></td>
+	</tr>
+    <tr >
+	    <td><center>true</center></td>
+	    <td><center>false</center></td>
+      <td>Dovecot protection <b>enabled</b> (default)
+      <ul><li>PAM-based module</li></ul>
+      </td>
+	</tr>
+      <tr>
+	    <td><center>true</center></td>
+	    <td><center>true</center></td>
+      <td>Dovecot protection <b>enabled</b>
+      <ul><li>Native module ON</li></ul>
+      </td>
+	</tr>
+</table>
+
+The following commands can be used to control the Dovecot native module:
+
+Enable:
+```
+# imunify360-agent config update '{"PAM": {"exim_dovecot_native": true}}'
+```
+Disable (default):
+```
+# imunify360-agent config update '{"PAM": {"exim_dovecot_native": false}}'
+```
+
+
 
 ## Notifications
 
