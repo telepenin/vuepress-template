@@ -6,11 +6,11 @@
 
 **Supported operating systems**
 
-* CentOS/RHEL 6,7,8
-* CloudLinux OS 6,7,8
-* Ubuntu 16.04 (LTS only), 18.04 and 20.04 (LTS)
-* Debian 9 and 10
-* AlmaLinux 8
+* <span class="notranslate"CentOS/RHEL</span> 6,7,8
+* <span class="notranslate"CloudLinux</span> OS 6,7,8
+* <span class="notranslate"Ubuntu</span> 16.04 (LTS only), 18.04 and 20.04 (LTS)
+* <span class="notranslate"Debian</span> 9 and 10
+* <span class="notranslate"AlmaLinux</span> 8
 
 **Virtualization**
 
