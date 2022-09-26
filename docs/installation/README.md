@@ -45,7 +45,7 @@
 
 ## Installation Instructions
 
-::: tip Debian 10 note
+::: tip <span class="notranslate">Debian</span> 10 note
 On  <span class="notranslate">Debian 10</span>, <span class="notranslate">`buster-backports`</span> should be enabled
 before installation:
   
