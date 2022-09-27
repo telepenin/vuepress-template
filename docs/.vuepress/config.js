@@ -88,11 +88,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       title: "Documentation",
       description: "Imunify360 documentation"
     },
-    "/ru/": {
-      lang: "ru",
-      title: "Документация",
-      description: "Документация Imunify360"
-    }
+//    "/ru/": {
+//    lang: "ru",
+//      title: "Документация",
+//      description: "Документация Imunify360"
+//    }
   },
   theme: "cloudlinux",
   // theme: '/Users/prefer/src/cloudlinux-doc-theme', // local path
@@ -192,65 +192,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         ]
       },
-      "/ru/": {
-        title: "Язык",
-        selectText: "Рус",
-        label: "Русский",
-        editLinkText: "Редактировать",
-        tryFree: "Попробовать бесплатно",
-        submitRequest: "Служба поддержки",
-        search: "Поиск",
-        serviceWorker: {
-          updatePopup: {
-            message: "Доступен новый контент",
-            buttonText: "Обновить"
-          }
-        },
-        algolia: {
-          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
-          indexName: 'imunify360-ru',
-          appId: 'C6CXTFLPAJ'
-        },
-        stayInTouch: "Будем на связи",
-        bottomLinks: [
-            {
-                text: "Инструкции",
-                url: "https://cloudlinux.zendesk.com/hc/en-us/categories/360002375980-Imunify-Security-Products"
-            },
-            {
-                text: "С чего начать",
-                url: "https://cloudlinux.zendesk.com/hc/en-us/sections/360004020779-Getting-Started"
-            },
-            {
-                text: "Техподдержка",
-                url: "https://www.imunify360.com/contact/"
-            },
-            { text: "Блог", url: "https://www.imunify360.com/blog" }
-        ],
-        sidebar: [
-          {
-            title: "Содержание",
-            collapsable: false,
-            children: [
-              "/ru/introduction/",
-              "/ru/billing/",
-              "/ru/installation/",
-              "/ru/update/",
-              "/ru/command_line_interface/",
-              "/ru/dashboard/",
-              "/ru/user_interface/",
-              "/ru/ids_integration/",
-              "/ru/features/",
-              "/ru/whmcs_plugin/",
-              "/ru/terminology/",
-              "/ru/localization/",
-              "/ru/config_file_description/",
-              "/ru/faq_and_known_issues/",
-              "/ru/uninstall/"
-            ]
-          }
-        ]
-      }
+//      "/ru/": {
+//        title: "Язык",
+//        selectText: "Рус",
+//      label: "Русский",
+//        editLinkText: "Редактировать",
+//        tryFree: "Попробовать бесплатно",
+//        submitRequest: "Служба поддержки",
+//        search: "Поиск",
+//        serviceWorker: {
+//          updatePopup: {
+//            message: "Доступен новый контент",
+//            buttonText: "Обновить"
+//          }
+//        },
+//        algolia: {
+//          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
+//          indexName: 'imunify360-ru',
+//          appId: 'C6CXTFLPAJ'
+//        },
+//        stayInTouch: "Будем на связи",
+//        bottomLinks: [
+//            {
+//                text: "Инструкции",
+//                url: "https://cloudlinux.zendesk.com/hc/en-us/categories/360002375980-Imunify-Security-Products"
+//            },
+//            {
+//                text: "С чего начать",
+//                url: "https://cloudlinux.zendesk.com/hc/en-us/sections/360004020779-Getting-Started"
+//            },
+//            {
+//                text: "Техподдержка",
+//                url: "https://www.imunify360.com/contact/"
+//            },
+//            { text: "Блог", url: "https://www.imunify360.com/blog" }
+//        ],
+//        sidebar: [
+//          {
+//            title: "Содержание",
+//            collapsable: false,
+//            children: [
+//              "/ru/introduction/",
+//              "/ru/billing/",
+//              "/ru/installation/",
+//            "/ru/update/",
+//              "/ru/command_line_interface/",
+//              "/ru/dashboard/",
+//              "/ru/user_interface/",
+//              "/ru/ids_integration/",
+//              "/ru/features/",
+//              "/ru/whmcs_plugin/",
+//              "/ru/terminology/",
+//              "/ru/localization/",
+//              "/ru/config_file_description/",
+//              "/ru/faq_and_known_issues/",
+//              "/ru/uninstall/"
+//            ]
+//          }
+//        ]
+//      }
     }
   }
 };
