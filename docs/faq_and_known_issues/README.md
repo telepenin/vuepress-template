@@ -1,4 +1,4 @@
-﻿# FAQ and Known Issues
+# FAQ and Known Issues
 
 [[toc]]
 
@@ -695,6 +695,11 @@ Custom exclude patterns have higher priority than custom watched patterns.
 :::warning IMPORTANT
 After making changes to this file, perform the <span class="notranslate">`imunify360-agent malware rebuild patterns`</span> command.
 :::   
+
+:::tip Note
+Starting from v. 6.8, the support for mount namespaces was added. It allows us to collect file events coming from processes running in a separate mount namespace which improves security.
+:::
+
 
 ### 22. How to test rules based on ModSecurity tags?
 
