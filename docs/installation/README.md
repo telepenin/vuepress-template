@@ -11,6 +11,7 @@
 * <span class="notranslate">Ubuntu</span> 16.04 (LTS only), 18.04 and 20.04 (LTS)
 * <span class="notranslate">Debian</span> 9 and 10
 * <span class="notranslate">AlmaLinux</span> 8
+* Rocky Linux 8 (cPanel, Plesk, and standalone)
 
 **Virtualization**
 
