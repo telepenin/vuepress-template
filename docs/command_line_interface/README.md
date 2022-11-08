@@ -309,7 +309,6 @@ where 12.34.56.78 is that specific IP address.
 |-|-|
 |<span class="notranslate">`--comment`</span>|allows to add comment to the item|
 |<span class="notranslate">`--expiration`</span>|allows specifying expiration time for the blacklisted IP (in seconds since epoch)|
-|<span class="notranslate">`--scope`</span>|allows to set the scope to <span class="notranslate">_Global/Local_</span>. Accepts two values: <span class="notranslate">`local`</span> (a default value, means "add IP on this server only") and <span class="notranslate">`group`</span> (means "add IP for the whole group in which this server is").|
 
 **Examples:**
 
@@ -358,6 +357,10 @@ cat list.txt | xargs -n 1 imunify360-agent blacklist ip add
 </div>
 
 The alternative would be using the [external white/black list feature](/features/#external-black-whitelist-management).
+	
+:::tip Note
+If an IP address has been added to the blacklist on a group of servers, it is enough to remove it from the blacklist on one of the servers, and it will be removed from the blacklist on all servers in the group.
+:::
 
 :::warning Warning
 For now, ipset supports only IPv6/64 networks. In most cases, it is enough to specify the mask `/64`. An example of 
