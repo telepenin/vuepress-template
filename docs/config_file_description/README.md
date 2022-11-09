@@ -127,8 +127,9 @@ that were uploaded via http/https. Note that it requires <a href="https://modsec
 <td># obsolete (not used)</td></tr>
 <tr><td><span class="notranslate">clamav_binary: True</span></td>
 <td># obsolete (not used)</td></tr>
-<tr><td><span class="notranslate">scan_modified_files: True</span></td>
-<td># enable (<span class="notranslate">True</span>) (default value) or disable (<span class="notranslate">False</span>) real-time scanning for modified files using inotify library. The Scanner searches for modified files in user’s DocumentRoot directories.</td></tr>
+<tr><td><span class="notranslate">scan_modified_files: Null</span></td>
+<td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default is not set). If disabled, it checks the file's timestamps (c/mtime) before scanning, and if the timestamp is not changed since the last scan, the file is skipped.
+Scanner's behaviour is based on other scan optimizations, therefore it is better to rely on default values and UI, although this parameter provides an option to overwrite this behaviour. This option is not available within UI.</td></tr>
 <tr><td><span class="notranslate">cloud_assisted_scan: True</span></td>
 <td># speed up scans by check file hashes using cloud database</td></tr>
 <tr><td><span class="notranslate">rapid_scan: True</span></td>
