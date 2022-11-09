@@ -433,12 +433,20 @@ You can get a malware sample file on the [eicar.org](http://www.eicar.org/).
 Make sure [the option is enabled](/dashboard/#malware).
 
 <div class="notranslate">
-
+And try to upload sample remotely, using user account:
+ 
 ```
 wget http://www.eicar.org/download/eicar.com.txt -O /tmp/eicar.com.txt
 scp /tmp/eicar.com.txt  mycooluser@X.Y.Z.A:/var/www/mycooluser/mycoolwebsite_docroot
 ```
+ 
+Or if you proceed under the root, use su:
 
+```
+cd /var/www/mycooluser/mycoolwebsite_docroot
+sudo su mycooluser -s /bin/bash -c "curl -o eicar.com.txt https://secure.eicar.org/eicar.com.txt"
+```
+ 
 </div>
 
 where <span class="notranslate">`X.Y.Z.A`</span> - your server IP address
