@@ -350,6 +350,8 @@ When done, click <span class="notranslate">_Add Country_</span> to confirm or <s
 
 ![](/images/north_korea_zoom92.png)
 
+Be aware of the possibility that blocking countries can cause unexpected issues, for example visitors from adjacent countries may not be able to connect if at BGP level the decision to send the traffic through the blocked IP was made, when using glued DNS records, or with some mirrors.
+
 You will see a notification if a country has been added successfully.
 
 ![](/images/sucess_country_zoom82.png)
