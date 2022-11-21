@@ -207,7 +207,7 @@ On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</s
 | | |
 |-|-|
 |**<span class="notranslate">IDS</span> name** | **Comment**|
-|<span class="notranslate">ASL (Atomicorp Secured Linux)</span> | Possibly is not compatible (investigating).|
+|<span class="notranslate">ASL (Atomicorp Secured Linux)</span> | <span class="notranslate">ASL</span> is not compatible with <span class="notranslate">Imunify360</span>, and cannot be run with <span class="notranslate">Imunify360</span> on the same server.|
 |<span class="notranslate">fail2ban</span> | Imunify360 disables <span class="notranslate">fail2ban</span>: the latter resets chains of iptables rules which causes inconsistency with Imunify360|
 
 
