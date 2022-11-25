@@ -697,7 +697,8 @@ To check, if Imunify360 ruleset is installed, run the following as root:
 <div class="notranslate">
 
 ``` bash
-# plesk sbin modsecurity_ctl -L --enabled
+# plesk bin server_pref --show-web-app-firewall | grep "\[waf-rule-set\]" -A2
+[waf-rule-set]
 custom
 ```
 
@@ -708,26 +709,22 @@ If the output does not contain imunify360, for example:
 <div class="notranslate">
 
 ``` bash
-# plesk sbin modsecurity_ctl -L --enabled
-tortix
+# plesk bin server_pref --show-web-app-firewall | grep "\[waf-rule-set\]" -A2
+[waf-rule-set]
+comodo_free
 ```
 
 </div>
 
-Then remove existing ruleset and install Imunify360 one:
+Then install Imunify360 ruleset and check it again:
 
 <div class="notranslate">
 
 ``` bash
-# plesk sbin modsecurity_ctl --disable-all-rules --ruleset tortix
-# plesk sbin modsecurity_ctl --uninstall --ruleset tortix
-# plesk sbin modsecurity_ctl -L --enabled
 # imunify360-agent install-vendors
-INFO    [+ 3785ms]                         defence360agent.simple_rpc|Executing ('install-vendors',), params: {}
-INFO    [+ 8781ms]   defence360agent.subsys.panels.plesk.mod_security|Successfully installed vendor 'imunify360-full-apache'.
-INFO    [+ 8782ms]                  defence360agent.subsys.web_server|Performing web_server graceful restart
 OK
-# plesk sbin modsecurity_ctl -L --enabled
+# plesk bin server_pref --show-web-app-firewall | grep "\[waf-rule-set\]" -A2
+[waf-rule-set]
 custom
 ```
 
