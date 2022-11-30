@@ -74,7 +74,7 @@ CentOS/CloudLinux/AlmaLinux systems:
 yum update imunify360-firewall
 ```
 
-Ubuntu 16.04, 18.04, and 20.04 systems:
+Ubuntu 16.04, 18.04, 20.04, and 22 systems:
 
 ```
 apt-get update

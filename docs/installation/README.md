@@ -8,7 +8,7 @@
 
 * <span class="notranslate">CentOS/RHEL</span> 6,7,8
 * <span class="notranslate">CloudLinux</span> OS 6,7,8
-* <span class="notranslate">Ubuntu</span> 16.04 (LTS only), 18.04 and 20.04 (LTS)
+* <span class="notranslate">Ubuntu</span> 16.04 (LTS only), 18.04, 20.04 (LTS), and 22 (Plesk, DirectAdmin, and standalone)
 * <span class="notranslate">Debian</span> 9 and 10
 * <span class="notranslate">AlmaLinux</span> 8
 * Rocky Linux 8 (cPanel, Plesk, and standalone)
@@ -227,9 +227,8 @@ Imunify360 can be installed directly on the server, independent of any panel, re
 * CentOS 6/7/8
 * RHEL 6/7
 * CloudLinux OS 
-* Ubuntu 16.04/18.04
+* Ubuntu 16.04/18.04/20.04/22
 * Debian 9/10
-* Ubuntu 20.04
 * Rocky Linux 8
 
 **Web servers**
