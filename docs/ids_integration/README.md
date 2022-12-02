@@ -617,7 +617,7 @@ If succeeded, the status of Imunify360 service will be displayed at <span class=
 #### ModSecurity Settings
 
 :::warning Note
-Since version 92, cPanel is adding experimental support of ModSecurity 3.x and starting from version 5.7, we implement **experimental** support of ModSecurity version 3 on cPanel. Since the support is experimental, there are some limitations. Please find them [here](/hosting_panels_specific_settin/#modsecurity-3-apache-limitations).
+Since version 92, cPanel is adding experimental support of ModSecurity 3.x and starting from version 5.7, we implement **experimental** support of ModSecurity version 3 on cPanel. Since the support is experimental, there are some limitations. Please find them [here](/ids_integration/#modsecurity-3-apache-limitations).
 :::
  
 Recommended <span class="notranslate">mod_security</span> settings are:
