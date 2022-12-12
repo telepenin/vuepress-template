@@ -1469,6 +1469,9 @@ Read [CXS integration](/ids_integration/#cxs-integration) documentation carefull
   It requires inotify to be installed and may put an additional load on a system.
   :::
 * <span class="notranslate">_Optimize real-time scan_</span> – enables the [File Change API](https://docs.cloudlinux.com/cloudlinux_os_kernel/#file-change-api) and **fanotify** support to reduce the system load while watching for file changes in comparison with inotify watchs.
+    :::tip Note
+    File change API can work only with ext4 file system.
+    :::
 
   | | | | |
   |-|:-:|:-:|:-:|
