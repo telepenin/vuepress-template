@@ -178,6 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "/installation/",
               "/update/",
               "/command_line_interface/",
+              "/control_panel_integration/",
               "/dashboard/",
               "/user_interface/",
               "/ids_integration/",
