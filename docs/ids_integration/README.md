@@ -1,4 +1,4 @@
-# Integrations
+# Other Integrations
 
 [[toc]]
 
