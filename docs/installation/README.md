@@ -29,7 +29,7 @@
 * <span class="notranslate">Plesk (Plesk</span> 17.5 or newer)
 * <span class="notranslate">DirectAdmin</span>
 * <span class="notranslate">CyberPanel</span> (only CloudLinux OS 7 and 8). See [3rd party integration guide from CyberPanel](https://community.cyberpanel.net/docs?category=49&tags=cloudlinux&topic=172)
-* Generic hosting panel ([Configuration required](/stand_alone/))
+* Generic hosting panel ([Configuration required](/control_panel_integration/#settings-related-to-stand-alone-version/))
 * Webuzo ([Imunify360 installation guide](https://webuzo.com/docs/installing-webuzo/install-imunify360/))
 
 **Required browsers**
