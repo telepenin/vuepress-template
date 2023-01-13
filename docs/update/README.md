@@ -74,12 +74,13 @@ CentOS/CloudLinux/AlmaLinux systems:
 yum update imunify360-firewall
 ```
 
-Ubuntu 16.04, 18.04, 20.04, and 22 systems:
+Ubuntu 16.04, 18.04, 20.04, and 22* systems:
 
 ```
 apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
+release-upgrade will require manually edit Imunify repositories before enabling them.
 
 Debian 9 and 10 systems:
 
