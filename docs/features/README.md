@@ -978,6 +978,32 @@ Those who don’t need this type of overridable configs can continue using custo
 This feature is backward compatible.
 
 
+## Scan of the system and user crontab files for malicious jobs <Badge text="Experimental" type="note"/>
+
+On the web server, the user’s Crontab files are notoriously tricky to maintain secure because of specific format and various placement of the files outside of users’ home directories depending on specific OS and platform, which makes them a compelling target for malicious actors.
+
+This feature detects any Crontab infection among the files that are owned by users of the server for every role that has access to run the scans on that server. 
+
+The feature is available as experimental starting from Imunify360 version 6.10 and switched off by default.
+
+The setting `MALWARE_SCANNING.crontabs` allows you to enable or disable scan of the system and user crontab files for malicious jobs. 
+
+Manage it through CLI:
+
+To switch it on:
+
+```
+# imunify360-agent config update '{"MALWARE_SCANNING": {"crontabs": true}}' 
+```
+
+And to switch it off:
+
+```
+# imunify360-agent config update '{"MALWARE_SCANNING": {"crontabs": false}}'
+```
+
+
+
 ## Hooks <Badge text="Deprecated" type="warning"/>
 
 You can use a new notification system via [CLI](/command_line_interface/#notifications-config) and [UI](/features/#notifications).
