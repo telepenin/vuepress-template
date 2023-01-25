@@ -211,7 +211,7 @@ Now two options can be used to control how brute force protection works for Dove
 	    <th rowspan="2">Behavior</th>
 	</tr >
 	<tr >
-	    <td>typePAM.exim_dovecot_protection</td>
+	    <td>PAM.exim_dovecot_protection</td>
 	    <td>PAM.exim_dovecot_native</td>
 	</tr>
   	<tr >
