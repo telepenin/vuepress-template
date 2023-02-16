@@ -50,7 +50,7 @@ apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-To upgrade Imunify360 on Debian 9, run the following command:
+To upgrade Imunify360 on Debian 9 (supported up to Imunify v6.11 (including)), run the following command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/9/ stretch main'  > /etc/apt/sources.list.d/imunify360-testing.list
@@ -58,7 +58,7 @@ apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-To upgrade Imunify360 on Debian 10, run the following command:
+To upgrade Imunify360 on Debian 10 and 11, run the following command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/10/ buster main'  > /etc/apt/sources.list.d/imunify360-testing.list
@@ -82,7 +82,7 @@ apt-get install --only-upgrade imunify360-firewall
 ```
 release-upgrade will require manually edit Imunify repositories before enabling them.
 
-Debian 9 and 10 systems:
+Debian 9 (supported up to Imunify v6.11 (including)), 10, and 11 systems:
 
 ```
 apt-get update
