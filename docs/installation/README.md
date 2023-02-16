@@ -9,7 +9,7 @@
 * <span class="notranslate">CentOS/RHEL</span> 6,7,8
 * <span class="notranslate">CloudLinux</span> OS 6,7,8
 * <span class="notranslate">Ubuntu</span> 16.04 (LTS only), 18.04, 20.04 (LTS), and 22 (Plesk, DirectAdmin, and standalone)
-* <span class="notranslate">Debian</span> 9 and 10
+* <span class="notranslate">Debian</span> 9 (up to Imunify v6.11 (including)), 10, and 11 (Plesk, DirectAdmin, and standalone)
 * <span class="notranslate">AlmaLinux</span> 8
 * Rocky Linux 8 (cPanel, Plesk, and standalone)
 
