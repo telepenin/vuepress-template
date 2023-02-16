@@ -233,12 +233,12 @@ to request CAPTCHA again</td></tr>
 <th align="left"># effective way to prevent brute-force attacks against FTP/SSH</th></tr>
 <tr><td><span class="notranslate">enable: False</span></td>
 <td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default value) PAM brute-force attack protection</td></tr>
-<tr><td><span class="notranslate">PAM.exim_dovecot_protection: False</span></td>
+<tr><td><span class="notranslate">exim_dovecot_protection: False</span></td>
 <td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default value) Exim+Dovecot brute-force attack protection against Dovecot brute-force attacks.</td></tr>
-<tr><td><span class="notranslate">PAM.ftp_protection: False</span></td>
+<tr><td><span class="notranslate">ftp_protection: False</span></td>
 <td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default value) FTP brute-force attack protection.</td></tr>
-<tr><td><span class="notranslate">PAM.exim_dovecot_native: False</span></td>
-<td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default value) the Dovecot native module.</td></tr>
+<tr><td><span class="notranslate">exim_dovecot_native: True</span></td>
+<td># enable (<span class="notranslate">True</span>) (default value) or disable (<span class="notranslate">False</span>) the Dovecot native module.</td></tr>
 <tr>
 <th align="left"><span class="notranslate">KERNELCARE:</span> (<b><font color="Red">deprecated</font></b>)</th>
 <th align="left"># KernelCare extension for Imunify360 which allows tracing malicious invocations to detect privilege escalation attempts</th></tr>
