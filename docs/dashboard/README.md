@@ -1517,7 +1517,13 @@ There are few platform requirements to use this feature:
   * Hyperscan supports Debian, Ubuntu and CentOS/CloudLinux 7 and later.
   * SSE3 processor instructions support. It is quite common nowadays, but may be lacking in virtual environments or in some rather old servers.
 
+#### Crontab files Scanning
 
+This is the mechanism allowing to address Crontab infections with our powerful Malware scanner. Enabled, it will catch any event of Crontab file modification on the fly in seconds and keep them malware-free in real-time.
+
+<img src="/images/crontabScanning.png" border="1px solid grey"/>
+
+The cleanup results are available on the *Malware* and *History* tabs of the Imunify360 interface as for any other type of malware.
 
 Tick required checkboxes and click <span class="notranslate">_Save changes_</span> button.
 

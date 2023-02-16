@@ -58,7 +58,7 @@ apt-get update
 apt-get install --only-upgrade imunify360-firewall
 ```
 
-To upgrade Imunify360 on Debian 10 and 11, run the following command:
+To upgrade Imunify360 on Debian 10, run the following command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/10/ buster main'  > /etc/apt/sources.list.d/imunify360-testing.list
