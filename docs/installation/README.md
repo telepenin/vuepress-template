@@ -15,7 +15,7 @@
 
 **Virtualization**
 
-<span class="notranslate">OpenVZ</span> - works for <span class="notranslate">Virtuozzo</span> 7 with kernel 3.10.0-327.10.1.vz7.12.8 or newer.
+<span class="notranslate">OpenVZ</span> - works for <span class="notranslate">Virtuozzo</span> 7 with kernel 3.10.0-1160.80.1.vz7.191.4 or newer.
 
 **Hardware**
 
