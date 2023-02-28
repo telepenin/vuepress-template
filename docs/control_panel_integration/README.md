@@ -486,6 +486,10 @@ The installation instructions are the same as for cPanel/Plesk/DirectAdmin versi
 
 The web-based UI is available via the domain configured in the <span class="notranslate">`ui_path`</span>.
 
+::: tip Note
+No files should be located in the folder configured with <span class="notranslate">`ui_path`</span>. We do not recommend using a directory in which any files are stored as a directory for Imunify UI files.  
+:::
+
 For example, if <span class="notranslate">`/var/www/vhosts/imunify360/imunify360.hosting.example.com/html/im360`</span> is the document root folder for the <span class="notranslate">`imunify360.hosting.example.com`</span> domain, then you could open Imunify360 with the following URL:
 
 * <span class="notranslate">`https://imunify360.hosting.example.com/`</span> (when you have TLS certificate configured for the domain) or
