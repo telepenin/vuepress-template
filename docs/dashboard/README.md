@@ -99,10 +99,6 @@ If your server's settings differ from the recommended, the Imunify Advisor will 
 ![](/images/dashboard_servers2.png)
 
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
 #### **How to get a server key**
 
 There are two ways to get a server key.
@@ -396,11 +392,6 @@ Use filters to show the exact list of the IPs:
 * <span class="notranslate">Comments</span> – allows filtering the list by comments. Enter a comment into the input field.
 * Use <span class="notranslate">_Items per page_</span> at the page bottom right to set the number of the incidents to be shown on the page.
 
-:::tip Notes
-* Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-* The individually whitelisted IP addresses take precedence over the country black list. These IP addresses will retain access even if the corresponding country of origin is blocked.
-:::
-
 The following actions are available for the ports:
 
 * add port to the list of blocked ports
@@ -514,10 +505,6 @@ The following filters are available:
 
 The table can be sorted by <span class="notranslate">_User name_</span> and <span class="notranslate">_Infection status_</span> (by the date of the last action).
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
 ### Malicious
 
 Go to <span class="notranslate">Imunify360 → Malware Scanner → Malicious</span> tab. Here, there is a table with a list of infected files within all domains and user accounts.
@@ -568,10 +555,6 @@ The following filters are available:
 * <span class="notranslate">**Timeframe**</span> — displays the results filtered by chosen period or date.
 * <span class="notranslate">**Status**</span> — displays the results filtered by chosen status.
 * <span class="notranslate">**Items per page displayed**</span> — click the number at the table bottom.
-
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
 
 The table can be sorted by detection date (detected), user name, file path (file), reason, and status.
 
@@ -686,10 +669,6 @@ The following filters are available:
 * <span class="notranslate">**Timeframe**</span> — displays the results filtered by chosen period or date.
 * <span class="notranslate">**Items per page**</span> — click the number at the table bottom.
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
-
 The table can be sorted by <span class="notranslate">_Added_</span> and <span class="notranslate">_Path_</span>. By default, it is sorted from newest to oldest.
 
 To search file or folder in the <span class="notranslate">Ignore List</span> use <span class="notranslate">_Search_</span> input field above the table.
@@ -739,15 +718,12 @@ To select a mode, tick the desired checkbox. When an action is completed, you wi
 The <span class="notranslate">Detected Events</span> table displays all the necessary information about PHP scripts with malicious activity detected by Imunify360 <span class="notranslate">Proactive Defense</span>.
 ![](/images/proactivedefensedetectedevents_zoom70.png)
 
-You can filter items by time frame in a <span class="notranslate">_Timframe_</span> dropdown and search a certain entity in a search field.
+You can filter items by time frame in a <span class="notranslate">_Timeframe_</span> dropdown and search a certain entity in a search field.
 
 The items in the <span class="notranslate">_Detected Events_</span> table are displayed per 25 on a page. To change a number of items displayed, click the number at the bottom right corner <span class="notranslate">_Items per page_</span> and select a desired number in the dropdown.
 
 To go to the next or the previous page click >> or << button or click a desired page number.
 
-:::tip Note
-Starting from Imunify360 v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
-:::
 
 The <span class="notranslate">_Detected Events_</span> table includes the following columns:
 * <span class="notranslate">Group/individual action</span> checkbox — allows to perform actions on one or several desired entities
@@ -797,7 +773,7 @@ Click _View details_ icon in the row of the desired event. Then, click <span cla
 
 ![](/images/proactivedefenseblockip_zoom70.png)
 
-**Move file to Ignore List (ignore detected rule)**
+#### Move file to Ignore List (ignore detected rule)
 
 **The first way**
 Click _Cog_ icon in the row of the desired event and choose <span class="notranslate">_Ignore detected rule for the file_</span>. Click <span class="notranslate">_Yes, add to Ignore List_</span> in the confirmation pop-up or click <span class="notranslate">_Cancel_</span> to close pop-up. Now you can see this file on the <span class="notranslate">Ignore List</span> tab.
@@ -808,7 +784,7 @@ Click _View details_ icon and then in the file details pop-up click <span class=
 
 ![](/images/proactivedefenseignoredetectedruleforfile1_zoom70.png)
 
-**Move file to Ignore List (ignore all rules)**
+#### Move file to Ignore List (ignore all rules)
 
 **The first way**
 Click _Cog_ icon in the row of the desired event and choose <span class="notranslate">_Ignore all rules for the file_</span>. Click <span class="notranslate">_Yes, add to Ignore List_</span> in the confirmation pop-up or click <span class="notranslate">_Cancel_</span> to close pop-up. The file will be moved to <span class="notranslate">Ignore List</span> tab.
