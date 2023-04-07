@@ -147,6 +147,10 @@ Scanner's behaviour is based on other scan optimizations, therefore it is better
 <tr><td><span class="notranslate">cert_refresh_timeout: 3600</span></td>
 <td># set in seconds how often SSL certificate will be refreshed</td></tr>
 <tr>
+<th colspan="2" align="left"><span class="notranslate">CONTROL_PANEL:</span></th></tr>
+<tr><td><span class="notranslate">compromised_user_password_reset: True</span></td>
+<td># enables resetting passwords for compromised cPanel accounts. Upon activating this functionality, our platform will detect instances where a cPanel account password has been breached and will subsequently prevent access using the previous password. End-users will then be prompted to create a new password via the <a href="https://docs.cpanel.net/knowledge-base/security/how-to-reset-a-cpanel-account-password/" target="_blank">cPanel password reset process</a>.</td></tr>
+<tr>
 <th colspan="2" align="left"><span class="notranslate">ERROR_REPORTING:</span></th></tr>
 <tr><td><span class="notranslate">enable: True</span></td>
 <td># automatically report errors to imunify360 team</td></tr>
