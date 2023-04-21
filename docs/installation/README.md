@@ -200,7 +200,7 @@ On DirectAdmin, Imunify UI requires the <span class="notranslate">`proc_open`</s
 |<span class="notranslate">Cloudflare</span> | Imunify360 supports graylisting IP addresses behind <span class="notranslate">Cloudflare</span>. More details [here](/ids_integration/#cloudflare-support).|
 |<span class="notranslate">CXS</span> | [Special actions required](/ids_integration/#cxs-integration) to use Imunify360 with <span class="notranslate">CXS</span> installed.|
 |<span class="notranslate">cPHulk</span> | Imunify360 disables <span class="notranslate">cPHulk</span> during installation. However in case of enabling it back, Imunify360 integrates with it and shows <span class="notranslate">cPHulk</span> events in the incident screen.|
-|<span class="notranslate">OpenVZ</span> | Works for <span class="notranslate">Virtuozzo</span> 7 with kernel 3.10.0-327.10.1.vz7.12.8 or later.|
+|<span class="notranslate">OpenVZ</span> | Works for <span class="notranslate">Virtuozzo</span> 7 with kernel 3.10.0-1160.80.1.vz7.191.4 or later.|
 |<span class="notranslate">UptimeRobot</span>| No problems detected.|
 
 **Incompatible**
