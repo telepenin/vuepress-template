@@ -18,7 +18,12 @@ const autoMetaOptions = {
   canonical_base: 'https://docs.imunify360.com/',
 };
 
+const { path } = require('@vuepress/utils')
+
 module.exports = {
+  globalUIComponents: [
+    'Chat'
+  ],
   plugins: [
     ['container', {
       type: 'warning',
@@ -42,7 +47,13 @@ module.exports = {
       }
     ],
     [ 'autometa', autoMetaOptions ],
-    [ 'separate-pages', { alwaysVisibleBlocks: ['#disqus_thread'] } ]
+    [ 'separate-pages', { alwaysVisibleBlocks: ['#disqus_thread'] } ],
+    [
+      '@vuepress/register-components',
+      {
+        componentsDir: path.resolve(__dirname, './components'),
+      },
+    ],
   ],
   configureWebpack: {
     resolve: {
@@ -77,7 +88,7 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5MC2SNS');`
-    ]
+    ],
   ],
 
   locales: {
@@ -94,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 //      description: "Документация Imunify360"
 //    }
   },
-  theme: "cloudlinux",
+ theme: "cloudlinux",
   // theme: '/Users/prefer/src/cloudlinux-doc-theme', // local path
   markdown: {
     slugify: slugifyLinks,
