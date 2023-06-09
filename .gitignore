@@ -1,4 +1,5 @@
 node_modules/
+package-lock.json
 # public/
 DS_Store
 dist/
@@ -12,3 +13,6 @@ selenium-debug.log
 .env
 .idea
 docs/.vuepress/dist
+.vscode
+.DS_Store
+docs/.vuepress/config.js

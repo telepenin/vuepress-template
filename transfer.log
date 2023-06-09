@@ -1,0 +1,176 @@
+/Users/prefer/.virtualenvs/scrapy1/bin/python /Applications/PyCharm.app/Contents/helpers/pydev/pydevd.py --multiproc --qt-support=auto --client 127.0.0.1 --port 52726 --file /Users/prefer/src/tmp/cl-doc-crawler/doc/run.py --folder /Users/prefer/src/imunify360-doc/docs --base-url=http://docs.imunify360.com --start-url=http://docs.imunify360.com/i360docs_content.htm
+pydev debugger: process 19951 is connecting
+
+Connected to pydev debugger (build 182.5107.15)
+2018-12-12 19:14:15 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: doc)
+2018-12-12 19:14:15 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.0b4 (v3.6.0b4:18496abdb3d5, Nov 21 2016, 20:44:47) - [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Darwin-18.2.0-x86_64-i386-64bit
+2018-12-12 19:14:15 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doc', 'NEWSPIDER_MODULE': 'doc.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['doc.spiders']}
+2018-12-12 19:14:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-12-12 19:14:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-12-12 19:14:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-12-12 19:14:15 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-12-12 19:14:15 [scrapy.core.engine] INFO: Spider opened
+2018-12-12 19:14:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 19:14:15 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-12-12 19:14:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://docs.imunify360.com/robots.txt> from <GET http://docs.imunify360.com/robots.txt>
+2018-12-12 19:14:16 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://docs.imunify360.com/robots.txt> (referer: None)
+2018-12-12 19:14:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://docs.imunify360.com/i360docs_content.htm> from <GET http://docs.imunify360.com/i360docs_content.htm>
+2018-12-12 19:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/i360docs_content.htm> (referer: None)
+2018-12-12 19:14:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/introduction.htm> (referer: https://docs.imunify360.com/i360docs_content.htm)
+2018-12-12 19:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/terminology.htm> (referer: https://docs.imunify360.com/introduction.htm)
+2018-12-12 19:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/billing.htm> (referer: https://docs.imunify360.com/terminology.htm)
+2018-12-12 19:14:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/installation.htm> (referer: https://docs.imunify360.com/billing.htm)
+2018-12-12 19:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/ids_integration.htm> (referer: https://docs.imunify360.com/installation.htm)
+2018-12-12 19:14:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/csf.htm> (referer: https://docs.imunify360.com/ids_integration.htm)
+2018-12-12 19:14:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/cxs.htm> (referer: https://docs.imunify360.com/csf.htm)
+2018-12-12 19:14:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/cloudflare_support.htm> (referer: https://docs.imunify360.com/cxs.htm)
+2018-12-12 19:14:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/backup_providers_integration.htm> (referer: https://docs.imunify360.com/cloudflare_support.htm)
+WARNING: Possible broken link - command_line_usage.htm#synopsis
+WARNING: Possible broken link - command_line_usage.htm#actions
+WARNING: Possible broken link - command_line_usage.htm#init
+WARNING: Possible broken link - command_line_usage.htm#list
+WARNING: Possible broken link - command_line_usage.htm#restore
+WARNING: Possible broken link - command_line_usage.htm#cleanup
+WARNING: Possible broken link - command_line_usage.htm#extra
+WARNING: Possible broken link - using_as_library.htm#restoringinfectedfiles
+WARNING: Possible broken link - using_as_library.htm#operatingwithbackend
+WARNING: Possible broken link - using_as_library.htm#operatingwithbackup
+WARNING: Possible broken link - using_as_library.htm#operatingwithfileinbackup
+WARNING: Possible broken link - creating_custom_backup_backend.htm#creatingmodule
+WARNING: Possible broken link - creating_custom_backup_backend.htm#definingclasses
+WARNING: Possible broken link - creating_custom_backup_backend.htm#backupclass
+WARNING: Possible broken link - creating_custom_backup_backend.htm#filedataclass
+WARNING: Possible broken link - creating_custom_backup_backend.htm#implementingapifunctions
+2018-12-12 19:14:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/overview2.htm> (referer: https://docs.imunify360.com/backup_providers_integration.htm)
+2018-12-12 19:14:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/command_line_usage.htm> (referer: https://docs.imunify360.com/overview2.htm)
+WARNING: Possible broken link - 'synopsis' for url='backup_providers_integration/command_line_usage' and text='Synopsis'. Please do find 'synopsis' and fix in the result files
+WARNING: Possible broken link - 'actions' for url='backup_providers_integration/command_line_usage' and text='Actions'. Please do find 'actions' and fix in the result files
+2018-12-12 19:14:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/using_as_library.htm> (referer: https://docs.imunify360.com/command_line_usage.htm)
+WARNING: Possible broken link - 'restoringinfectedfiles' for url='backup_providers_integration/using_as_library' and text='Restoring Infected Files'. Please do find 'restoringinfectedfiles' and fix in the result files
+WARNING: Possible broken link - 'operatingwithbackend' for url='backup_providers_integration/using_as_library' and text='Operating With Backend'. Please do find 'operatingwithbackend' and fix in the result files
+WARNING: Possible broken link - 'operatingwithbackup' for url='backup_providers_integration/using_as_library' and text='Operating With Backup'. Please do find 'operatingwithbackup' and fix in the result files
+WARNING: Possible broken link - 'operatingwithfileinbackup' for url='backup_providers_integration/using_as_library' and text='Operating With File in Backup'. Please do find 'operatingwithfileinbackup' and fix in the result files
+2018-12-12 19:14:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/creating_custom_backup_backend.htm> (referer: https://docs.imunify360.com/using_as_library.htm)
+WARNING: Possible broken link - 'creatingmodule' for url='backup_providers_integration/creating_custom_backup_backend' and text='Creating Module'. Please do find 'creatingmodule' and fix in the result files
+WARNING: Possible broken link - 'definingclasses' for url='backup_providers_integration/creating_custom_backup_backend' and text='Defining Classes'. Please do find 'definingclasses' and fix in the result files
+WARNING: Possible broken link - 'implementingapifunctions' for url='backup_providers_integration/creating_custom_backup_backend' and text='Implementing API Functions'. Please do find 'implementingapifunctions' and fix in the result files
+2018-12-12 19:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/localization.htm> (referer: https://docs.imunify360.com/creating_custom_backup_backend.htm)
+2018-12-12 19:14:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/captcha.htm> (referer: https://docs.imunify360.com/localization.htm)
+2018-12-12 19:14:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/dashboard.htm> (referer: https://docs.imunify360.com/captcha.htm)
+2018-12-12 19:14:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/support.htm> (referer: https://docs.imunify360.com/dashboard.htm)
+2018-12-12 19:14:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/incidents.htm> (referer: https://docs.imunify360.com/support.htm)
+2018-12-12 19:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/firewall.htm> (referer: https://docs.imunify360.com/incidents.htm)
+2018-12-12 19:15:18 [scrapy.extensions.logstats] INFO: Crawled 21 pages (at 21 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 19:15:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/malware_scanner.htm> (referer: https://docs.imunify360.com/firewall.htm)
+WARNING: Possible broken link - malware_scanner.htm#restorefromquarantine
+WARNING: Possible broken link - malware.htm#malwarecleanup
+2018-12-12 19:15:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/proactive_defense.htm> (referer: https://docs.imunify360.com/malware_scanner.htm)
+2018-12-12 19:16:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/reputation_management.htm> (referer: https://docs.imunify360.com/proactive_defense.htm)
+2018-12-12 19:16:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/kernelcare_integration.htm> (referer: https://docs.imunify360.com/reputation_management.htm)
+2018-12-12 19:16:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/settings.htm> (referer: https://docs.imunify360.com/kernelcare_integration.htm)
+2018-12-12 19:16:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/general.htm> (referer: https://docs.imunify360.com/settings.htm)
+WARNING: Possible broken link - general.htm#installation
+WARNING: Possible broken link - general.htm#dosprotection
+WARNING: Possible broken link - general.htm#autowhitelist
+WARNING: Possible broken link - general.htm#incidentslogging
+WARNING: Possible broken link - general.htm#errorreporting
+WARNING: Possible broken link - 'installation' for url='dashboard/settings/general' and text='Installation'. Please do find 'installation' and fix in the result files
+WARNING: Possible broken link - general.htm#hardenedphp
+WARNING: Possible broken link - general.htm#invisiblecaptcha
+WARNING: Possible broken link - general.htm#kernelcare
+WARNING: Possible broken link - 'dosprotection' for url='dashboard/settings/general' and text='DoS Protection'. Please do find 'dosprotection' and fix in the result files
+WARNING: Possible broken link - 'autowhitelist' for url='dashboard/settings/general' and text='Auto White List'. Please do find 'autowhitelist' and fix in the result files
+WARNING: Possible broken link - 'incidentslogging' for url='dashboard/settings/general' and text='Incidents Logging'. Please do find 'incidentslogging' and fix in the result files
+WARNING: Possible broken link - 'errorreporting' for url='dashboard/settings/general' and text='Error Reporting'. Please do find 'errorreporting' and fix in the result files
+2018-12-12 19:16:19 [scrapy.extensions.logstats] INFO: Crawled 27 pages (at 6 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 19:16:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/malware.htm> (referer: https://docs.imunify360.com/general.htm)
+2018-12-12 19:16:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/backups.htm> (referer: https://docs.imunify360.com/malware.htm)
+2018-12-12 19:16:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/overview.htm> (referer: https://docs.imunify360.com/backups.htm)
+2018-12-12 19:16:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/user_interface.htm> (referer: https://docs.imunify360.com/overview.htm)
+WARNING: Possible broken link - user_interface.htm#howtoenablebackups
+WARNING: Possible broken link - user_interface.htm#howtodisablebackups
+WARNING: Possible broken link - user_interface.htm#howtomanageclbackup
+WARNING: Possible broken link - user_interface.htm#resizeclbackup
+WARNING: Possible broken link - user_interface.htm#scheduleclbackup
+WARNING: Possible broken link - user_interface.htm#howtorestorefile
+WARNING: Possible broken link - user_interface.htm#acronisbackup
+WARNING: Possible broken link - user_interface.htm#howtodisablebackups
+WARNING: Possible broken link - user_interface.htm#howtomanageclbackup
+WARNING: Possible broken link - user_interface.htm#resizeclbackup
+WARNING: Possible broken link - user_interface.htm#scheduleclbackup
+2018-12-12 19:16:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/disabled_rules.htm> (referer: https://docs.imunify360.com/user_interface.htm)
+2018-12-12 19:16:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/attributions.htm> (referer: https://docs.imunify360.com/disabled_rules.htm)
+2018-12-12 19:16:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/hosting_panels_specific_settin.htm> (referer: https://docs.imunify360.com/attributions.htm)
+2018-12-12 19:16:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/config_file_description.htm> (referer: https://docs.imunify360.com/hosting_panels_specific_settin.htm)
+WARNING: Possible broken link - general.htm#incidentslogging
+2018-12-12 19:16:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/command_line_interface.htm> (referer: https://docs.imunify360.com/config_file_description.htm)
+2018-12-12 19:16:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/uninstall.htm> (referer: https://docs.imunify360.com/command_line_interface.htm)
+2018-12-12 19:16:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/faq_and_known_issues.htm> (referer: https://docs.imunify360.com/uninstall.htm)
+2018-12-12 19:16:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/whmcs_plugin.htm> (referer: https://docs.imunify360.com/faq_and_known_issues.htm)
+2018-12-12 19:16:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/overview1.htm> (referer: https://docs.imunify360.com/whmcs_plugin.htm)
+2018-12-12 19:16:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/installation_and_configuration.htm> (referer: https://docs.imunify360.com/overview1.htm)
+2018-12-12 19:16:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/installation_update.htm> (referer: https://docs.imunify360.com/installation_and_configuration.htm)
+2018-12-12 19:16:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/configuration_of_product.htm> (referer: https://docs.imunify360.com/installation_update.htm)
+2018-12-12 19:16:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/configuration_of_addon.htm> (referer: https://docs.imunify360.com/configuration_of_product.htm)
+2018-12-12 19:17:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/management.htm> (referer: https://docs.imunify360.com/configuration_of_addon.htm)
+2018-12-12 19:17:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/link_via_addon__optional_licen.htm> (referer: https://docs.imunify360.com/management.htm)
+2018-12-12 19:17:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/link_products_directly.htm> (referer: https://docs.imunify360.com/link_via_addon__optional_licen.htm)
+2018-12-12 19:17:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/link_via_configurable_options.htm> (referer: https://docs.imunify360.com/link_products_directly.htm)
+2018-12-12 19:17:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/link_addons_directly.htm> (referer: https://docs.imunify360.com/link_via_configurable_options.htm)
+2018-12-12 19:17:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/imunify360_key_licenses2.htm> (referer: https://docs.imunify360.com/link_addons_directly.htm)
+2018-12-12 19:17:16 [scrapy.extensions.logstats] INFO: Crawled 50 pages (at 23 pages/min), scraped 0 items (at 0 items/min)
+2018-12-12 19:17:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/order.htm> (referer: https://docs.imunify360.com/imunify360_key_licenses2.htm)
+2018-12-12 19:17:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/admin_area.htm> (referer: https://docs.imunify360.com/order.htm)
+2018-12-12 19:17:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/client_area.htm> (referer: https://docs.imunify360.com/admin_area.htm)
+2018-12-12 19:17:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/licenses_list.htm> (referer: https://docs.imunify360.com/client_area.htm)
+2018-12-12 19:17:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/_addon_licenses_list.htm> (referer: https://docs.imunify360.com/licenses_list.htm)
+2018-12-12 19:17:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/common_problems.htm> (referer: https://docs.imunify360.com/_addon_licenses_list.htm)
+2018-12-12 19:17:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunify360.com/downloading_documentation.htm> (referer: https://docs.imunify360.com/common_problems.htm)
+2018-12-12 19:17:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-12-12 19:17:36 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 17178,
+ 'downloader/request_count': 59,
+ 'downloader/request_method_count/GET': 59,
+ 'downloader/response_bytes': 790843,
+ 'downloader/response_count': 59,
+ 'downloader/response_status_count/200': 56,
+ 'downloader/response_status_count/302': 2,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 12, 12, 16, 17, 36, 382833),
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 10,
+ 'memusage/max': 89903104,
+ 'memusage/startup': 75644928,
+ 'request_depth_max': 55,
+ 'response_received_count': 57,
+ 'scheduler/dequeued': 57,
+ 'scheduler/dequeued/memory': 57,
+ 'scheduler/enqueued': 57,
+ 'scheduler/enqueued/memory': 57,
+ 'start_time': datetime.datetime(2018, 12, 12, 16, 14, 15, 851489)}
+2018-12-12 19:17:36 [scrapy.core.engine] INFO: Spider closed (finished)
+
+Process finished with exit code 0

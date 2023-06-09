@@ -3,9 +3,23 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
-    "@vuepress/plugin-i18n-ui": "^1.0.0-alpha.0",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.0"
+  "dependencies": {
+    "@vuepress/plugin-google-analytics": "^1.4.1",
+    "@vuepress/utils": "^2.0.0-alpha.1",
+    "cl-doc-vue-bot-ui": "0.0.30",
+    "vue": "~2.5.16",
+    "vue-server-renderer": "~2.5.16",
+    "vue-template-compiler": "~2.5.16",
+    "vuepress": "^1.0.2",
+    "vuepress-plugin-autometa": "^0.1.13",
+    "vuepress-plugin-container": "^2.1.0",
+    "vuepress-plugin-disqus-spa": "^0.1.1",
+    "vuepress-plugin-separate-pages": "^0.1.4",
+    "vuepress-theme-cloudlinux": "https://github.com/cloudlinux/cloudlinux-doc-theme.git"
+  },
+  "resolutions": {
+    "terser": "3.14.1",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.13"
   }
 }

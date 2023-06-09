@@ -1,7 +1,7 @@
 # Install dependencies
 
 ```
-$ yarn add -D vuepress
+$ yarn
 ```
 
 # Start local server
